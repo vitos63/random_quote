@@ -19,7 +19,7 @@
 1. Клонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/ваш_пользователь/имя_репозитория.git
+    git clone https://github.com/vitos_63/random_quote.git
     cd имя_репозитория
     ```
 
