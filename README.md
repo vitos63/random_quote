@@ -6,7 +6,6 @@
 
 ## Структура проекта
 
-- `random_quote/` — папка с исходным кодом для генерации цитат.
 - `requirements.txt` — файл с зависимостями проекта.
 - `Dockerfile` — описание для контейнеризации проекта.
 - `docker-compose.yaml` — файл для настройки контейнеров.
@@ -20,7 +19,6 @@
 
     ```bash
     git clone https://github.com/vitos_63/random_quote.git
-    cd random_quote
     ```
 
 2. Создайте и активируйте виртуальное окружение:
