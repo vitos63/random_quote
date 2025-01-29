@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Поиск по категориям</h1>
+<form method="get">
+    <div class="form-fields">
+        {% for f in category_search_form %}
+            {{f}}
+        {% endfor %}
+    </div>
+</form>
+
+<div class="category-container">
+    <h1 class="title">Категории цитат</h1>
+    <div class="categories-grid">
+        {% if categories %}
+        {% for category in categories %}
+        <div class="category-card">
+            <a href="{{ category.get_absolute_url }}" class="category-link">
+                <div class="category-title">{{ category.name }}</div>
+            </a>
+        </div>
+        {% endfor %}
+        {% else %}
+        <h2>По запросу "{{search_field}}" ничего не найдено</h2>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}
+

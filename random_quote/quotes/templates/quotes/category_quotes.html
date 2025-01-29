@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Категория: {{category}}</h1>
+    <div class="quotes-container">
+        {% for quote in quotes %}
+            <div class="quote">
+                <p>"{{ quote.quote }}"</p>
+                <footer>Автор: <a href="{{ quote.author.get_absolute_url }}">{{ quote.author.name }}</a></footer>
+                <footer>Категории:
+                    {% for cat in quote.category.all %}
+                        <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>{% if not forloop.last %}, {% endif %}  
+                    {% endfor %}
+                </footer>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}
+    

@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<style>
+    .button {
+        padding: 15px 30px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+</style>
+<div class="profile-container">
+    <div class="profile-header">
+            {% if user.profile.photo %}
+                <img src="{{ user.profile.photo.url }}" alt="Фото профиля" class="profile-photo">
+            {% else %}
+                <img src="{{ default_photo }}" alt="Фото по умолчанию" class="profile-photo">
+            {% endif %}
+            <div class="profile-info">
+                <h1 class="profile-username">{{ user.username }}</h1>
+                <p class="profile-email">{{ user.email }}</p>
+            </div>
+
+        </div>
+        
+            <a href="{% url 'users:edit_profile' %}" class="btn btn-primary">Редактировать профиль</a>
+            <div class="button-container">
+            <a class="button active" href="{% url 'users:saved_quotes' %}"> Сохраненные цитаты</a>
+                <button class="button inactive">Предложенные цитаты</button>
+            </div>
+        <h1>Предложенные цитаты</h1>
+        {% if suggested_quotes %}
+        <div class="quotes-container">
+            
+            {% for quote in suggested_quotes %}
+                <div class="quote">
+                    <p>"{{ quote.quote }}"</p>
+                    <footer>Автор: <a href="{{ quote.author.get_absolute_url }}">{{ quote.author.name }}</a></footer>
+                    <footer>Категории:
+                        {% for cat in quote.category.all %}
+                            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </footer>
+                    <footer>Статус: {{ quote.get_status_display }}</footer>
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+            <h2>Вы не предложили ни одной цитаты</h2>
+        {% endif %}
+
+      
+</div>
+{% endblock %}

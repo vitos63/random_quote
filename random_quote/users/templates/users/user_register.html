@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="profile-container">
+    <h2>{{title}}</h2>
+    <form action="" method="POST" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-fields">
+            {{ form.as_p }}
+        </div>
+        <input type="checkbox" id="toggle_password"> Показать пароль
+        <button type="submit">{{button}}</button>
+           </form>
+</div>
+<script>
+    document.getElementById('toggle_password').addEventListener('change', function () {
+        var passwordField = document.getElementById('password_field1');
+        if (this.checked) {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    });
+</script>
+
+<script>
+    document.getElementById('toggle_password').addEventListener('change', function () {
+        var passwordField = document.getElementById('password_field2');
+        if (this.checked) {
+            passwordField.type = 'text';
+        } else {
+            passwordField.type = 'password';
+        }
+    });
+</script>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+.button {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.button-delete {
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+            color: white;
+            text-decoration: none;
+            background-color: rgb(172, 44, 44);
+            transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+.button-delete:link,
+.button-delete:visited,
+.button-delete:hover,
+.button-delete:active{    
+    color: white;
+    text-decoration: none;
+}
+
+</style>
+
+<div class="profile-container">
+    <div class="profile-header">
+            {% if user.profile.photo %}
+                <img src="{{ user.profile.photo.url }}" alt="Фото профиля" class="profile-photo">
+            {% else %}
+                <img src="{{ default_photo }}" alt="Фото по умолчанию" class="profile-photo">
+            {% endif %}
+            <div class="profile-info">
+                <h1 class="profile-username">{{ user.username }}</h1>
+                <p class="profile-email">{{ user.email }}</p>
+            </div>
+
+        </div>
+            <a href="{% url 'users:edit_profile' %}" class="btn btn-primary">Редактировать профиль</a>
+
+            <div class="button-container">
+        <button class="button inactive">Сохраненные цитаты</button>
+        <a class="button active" href="{% url 'users:suggested_quotes' %}">Предложенные цитаты</a>
+        </div>
+
+        <h1>Сохраненные цитаты</h1>
+        {% if saved_quotes %}
+        <div class="quotes-container">
+            
+            {% for quote in saved_quotes %}
+                <div class="quote">
+                    <p>"{{ quote.quote }}"</p>
+                    <footer>Автор: <a href="{{ quote.author.get_absolute_url }}">{{ quote.author.name }}</a></footer>
+                    <p>Категории:
+                        {% for cat in quote.category.all %}
+                            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </p>
+                    <a class="button-delete" href="{% url 'users:delete_saved_quotes' quote.id %}">Удалить цитату</a>
+                </div>
+            {% endfor %}
+        </div>
+        {% else %}
+            <h2>Вы не сохранили ни одной цитаты</h2>
+        {% endif %}
+</div>
+<div id="message-container">
+    {% if messages %}
+        {% for message in messages %}
+        {% if 'success' in message.tags %}
+        <div class="alert alert-success" id="message">
+            {{ message }}
+        </div>
+        {% else %}
+         <div class="alert-danger" id="message">
+                    {{ message }}
+                </div>
+                {% endif %}
+        {% endfor %}
+        {% endif %}
+</div>
+</div>
+<script>
+
+setTimeout(() => {
+    const message = document.getElementById('message');
+    if (message) {
+        message.style.display = 'none';
+    }
+}, 4000);
+</script>
+{% endblock %}

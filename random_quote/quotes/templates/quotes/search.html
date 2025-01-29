@@ -1,0 +1,66 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Поиск по сайту</h1>
+<form method="get" action="{% url 'search' %}">
+    <div class="form-fields">
+        {% for f in search_form %}
+            {{f}}
+        {% endfor %}
+    </div>
+
+    <h1>Результаты поиска по запросу "{{search_field}}":</h1>
+    {% if quotes_result or authors_result or  categories_result%}
+
+    {% if authors_result %}
+    <h2>Авторы</h2>
+        {% for author in authors_result %}
+        <div class="quote">
+            <a href="{{ author.get_absolute_url }}">
+                {% if author.photo %}
+                    <img src="{{author.photo.url}}" width="90" height="100">
+                {% else %}
+                    <img src="{{default_photo}}" width="100" height="100">
+                {% endif %}
+                </a>
+            <div class="author-name"><a href="{{ author.get_absolute_url }}">{{author.name}}</a></div>
+            <p>"{{ author.biography|truncatechars:200 }}"</p>
+        </div>
+        {% endfor %}
+    {% endif %}
+
+
+    
+    {% if categories_result %}
+    <h2>Категории</h2>
+    <div class="categories-grid">
+        {% for category in categories_result %}
+        <div class="category-card">
+            <a href="{{ category.get_absolute_url }}" class="category-link">
+                <div class="category-title">{{ category.name }}</div>
+            </a>
+        </div>
+        {% endfor %}
+        </div>
+    {% endif %}
+
+
+    {% if quotes_result %}
+    <h2>Цитаты</h2>
+        {% for quote in quotes_result %}
+        <div class="quote">
+            <p>"{{ quote.quote }}"</p>
+            <footer>Автор: <a href="{{ quote.author.get_absolute_url }}">{{ quote.author.name }}</a></footer>
+            <footer>Категории:
+                {% for cat in quote.category.all %}
+                    <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>{% if not forloop.last %}, {% endif %}  
+                {% endfor %}
+            </footer>
+        </div>
+        {% endfor %}
+    {% endif %}
+{% else %}
+    <h2>По запросу "{{search_field}}" ничего не найдено.</h2>
+{% endif %}
+
+{% endblock %}

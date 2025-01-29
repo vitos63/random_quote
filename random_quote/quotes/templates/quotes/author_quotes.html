@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="profile-container">
+    <div class="profile-header">
+        {% if author.photo %}
+            <img src="{{author.photo.url}}" width="90" height="100">
+        {% else %}
+            <img src="{{default_photo}}" width="60" height="60">
+        {% endif %}
+        <div class="profile-info">
+            <h1 class="profile-username">{{ author.name }}</h1>
+            <p class="author-description">{{ author.biography }}</p>
+        </div>
+    </div>
+    
+        <div class="quotes-container">
+            {% for quote in quotes %}
+                <div class="quote">
+                    <p>"{{ quote.quote }}"</p>
+                    
+                    <footer>Категории:
+                        {% for cat in quote.category.all %}
+                            <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>{% if not forloop.last %}, {% endif %}
+                        {% endfor %}
+                    </footer>
+                </div>
+            {% endfor %}
+        </div>
+
+
+{% endblock %}

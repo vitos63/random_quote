@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block content %}
+<title>Авторы</title>
+<div class="authors-container">
+    {% for author in authors %}
+    <div class="author-card">
+        <a href="{{ author.get_absolute_url }}">
+        {% if author.photo %}
+            <img src="{{author.photo.url}}" width="90" height="100">
+        {% else %}
+            <img src="{{default_photo}}" width="100" height="100">
+        {% endif %}
+        </a>
+        <div class="author-info">
+            <div class="author-name"><a href="{{ author.get_absolute_url }}">{{author.name}}</a></div>
+            <div class="author-description">{{ author.biography |truncatechars:200}}</div>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -1,0 +1,54 @@
+{%load static %}
+<link href="{% static 'django_select2/django_select2.css' %}" rel="stylesheet">
+<script src="{% static 'django_select2/django_select2.js' %}"></script>
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Quotes</title>
+    <link rel="stylesheet" href="{% static 'random/styles.css' %}">
+    {{ form.media }}
+
+</head>
+
+        <header class="header">
+            <div class="menu-container">
+                <nav class="nav">
+                    <ul>
+                        <a href="{% url 'home' %}">
+                            <img src="{% static 'random/logo.png' %}" width="80" height="80">
+                        </a>
+                        {% for m in menu %}
+                        <li><a href="{% url m.url_name %}" class="current">{{m.title}}</a></li>
+                        {% endfor %}
+                        <li class="search-form">
+                        <form method="get" action="{% url 'search' %}" >
+                            <div class="form-fields">
+                                {% for f in search_form %}
+                                    {{f}}
+                                {% endfor %}
+                            </div>
+                        </form>
+                        </li>
+                        <li class="auth-links">
+                        {% if user.is_authenticated %}
+                        <li><a href="{% url 'users:suggested_quotes' %}" class="current">{{user.username}}</a>|<a href="{% url 'users:logout' %}"onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Выйти</a>
+                            <form id="logout-form" action="{% url 'users:logout' %}" method="post" style="display: none;">
+                                {% csrf_token %}
+                              </form>
+                        {% else %}
+                        <li><a href="{% url 'users:login' %}" class="current">Войти/Зарегистрироваться</a></li>
+                        {% endif %}
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <body>
+
+        {% block content %}
+        {% endblock %}       
+</body>
+</html>

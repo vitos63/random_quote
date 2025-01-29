@@ -1,0 +1,4802 @@
+[
+{
+  "model": "contenttypes.contenttype",
+  "pk": 1,
+  "fields": {
+    "app_label": "admin",
+    "model": "logentry"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 2,
+  "fields": {
+    "app_label": "auth",
+    "model": "permission"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 3,
+  "fields": {
+    "app_label": "auth",
+    "model": "group"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 4,
+  "fields": {
+    "app_label": "auth",
+    "model": "user"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 5,
+  "fields": {
+    "app_label": "contenttypes",
+    "model": "contenttype"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 6,
+  "fields": {
+    "app_label": "sessions",
+    "model": "session"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 7,
+  "fields": {
+    "app_label": "quotes",
+    "model": "authors"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 8,
+  "fields": {
+    "app_label": "quotes",
+    "model": "category"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 9,
+  "fields": {
+    "app_label": "quotes",
+    "model": "quotes"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 10,
+  "fields": {
+    "app_label": "quotes",
+    "model": "menu"
+  }
+},
+{
+  "model": "contenttypes.contenttype",
+  "pk": 16,
+  "fields": {
+    "app_label": "users",
+    "model": "user"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "0weoe0fkrhag7crx47092nbg7p12692r",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2CVlMSc8Zov0ZB5AtxUmFuDuJlALamXnvbQZc5jwsTadhFHMx3hx-GSE_tWxCHlju1XIt8zSS3RK722ZvVfR13du_g4wtr-uOz168hlN0FOMxAAHExM4l6gH9isVFCAl9wo41aOoVJQRmACF15vMF2Zs4Xw:1tckn0:M3qVKvIP09aRsXmKf-3ZMfDN4VfD4CmzDWmNXKxa-WE",
+    "expire_date": "2025-02-11T12:33:58.286Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "31i88m1bu1ca6cv6l5xso8os3l99gtou",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2CVlMSc8Zov0ZB5AtxUmFuDuJlALamXnvbQZc5jwsTadhFHMx3hx-GSE_tWxCHlju1XIt8zSS3RK722ZvVfR13du_g4wtr-uOz168hlN0FOMxAAHExM4l6gH9isVFCAl9wo41aOoVJQRmACF15vMF2Zs4Xw:1tcoME:n1WbfgnoddmcGGzDpqkeUHQv6DhoL52zFVKee5t8EbY",
+    "expire_date": "2025-02-11T16:22:34.508Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "7iwexwbg1oboxgxpz4t81akxwpow5dos",
+  "fields": {
+    "session_data": "eyJnaXRodWJfc3RhdGUiOiJSdVdJdHJWSzFENlB0NU1sWUVVVURhVDBCVmp2ZVZMMiJ9:1tYlGh:yf1jNgxt-9X6QByxWGBxMf13y_3wP9T6eFzWWyWgUjw",
+    "expire_date": "2025-01-31T12:16:07.628Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "8k6tsm3se5cszgbptk648xdakr1th6x0",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2CVlMSc8Zov0ZB5AtxUmFuDuJlALamXnvbQZc5jwsTadhFHMx3hx-GSE_tWxCHlju1XIt8zSS3RK722ZvVfR13du_g4wtr-uOz168hlN0FOMxAAHExM4l6gH9isVFCAl9wo41aOoVJQRmACF15vMF2Zs4Xw:1tXlc0:BgtgvqmB95oA6CuOrsNRa0_ODSb3ZtuXiopOeBMYstQ",
+    "expire_date": "2025-01-28T18:26:00.691Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "9tkzrbq4qnjd85mzgzhve12cs3trggfp",
+  "fields": {
+    "session_data": "e30:1tcJ8I:hfPNlUNIrLS1MWQ_BKNJHUVebnOBhKqBWE-vDeIYAiE",
+    "expire_date": "2025-02-10T07:02:06.224Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "e5ls8dn1f5odgi0daghisga5t5rb4vzn",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2CVlMSc8Zov0ZB5AtxUmFuDuJlALamXnvbQZc5jwsTadhFHMx3hx-GSE_tWxCHlju1XIt8zSS3RK722ZvVfR13du_g4wtr-uOz168hlN0FOMxAAHExM4l6gH9isVFCAl9wo41aOoVJQRmACF15vMF2Zs4Xw:1tZ4wW:On3ROem4Y7Pa2bx5yoHel9yHzZ1Y-4mDaptZ9CwD8Lo",
+    "expire_date": "2025-02-01T09:16:36.469Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i427xzfp6evic409djco6jkfn38l96bk",
+  "fields": {
+    "session_data": ".eJxVjDsOwjAQBe_iGlm2CVlMSc8Zov0ZB5AtxUmFuDuJlALamXnvbQZc5jwsTadhFHMx3hx-GSE_tWxCHlju1XIt8zSS3RK722ZvVfR13du_g4wtr-uOz168hlN0FOMxAAHExM4l6gH9isVFCAl9wo41aOoVJQRmACF15vMF2Zs4Xw:1tM34w:b4GIQ4HwkFyPgFNgFF79uoD73lDujvawE2iqLNrnTGE",
+    "expire_date": "2024-12-27T10:39:26.057Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "i7ppkc4es5qvrz1z2m6ul5zb4bn5d830",
+  "fields": {
+    "session_data": ".eJxVjrEOgjAYhN-lsyGl_KXUzcRojAnKomPTlhZQBEOLi_HdRWCQ6ZK7fHf3RkXly14J56U3aI26dFdACHFm3eEZZRd8rdOzvTVb9nhZTY9ohYTsfSl6ZzpR5QPClp6S-m6aX-BaXcla6LYzwey6YNoL9qOcNgNGlnwpXTnAnGNFWZyoXIcWs5AChAzzBBTn1ChNuCXGUELAJhARlWDAYE2OOUgOeTyUzvtjdS2dF3VbVM3fwekL-nwBFW1Wqw:1tYlno:gBQEnaGi_caZYNjpusf6tVRbeY9ipH1KpW9626svc7o",
+    "expire_date": "2025-01-31T12:50:20.451Z"
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "rcskbfgrehaenvn22pq9a2zabryg9k36",
+  "fields": {
+    "session_data": "eyJnaXRodWJfc3RhdGUiOiJUZGdLNlo2RXJNT1RlT0xTY3VBZklwTWo3aHhsSlNreCJ9:1tYlFV:wUd058YXTyfmc8bxlAc0z9C41xx1m8FN5h-uojvcrq0",
+    "expire_date": "2025-01-31T12:14:53.200Z"
+  }
+},
+{
+  "model": "quotes.menu",
+  "pk": 1,
+  "fields": {
+    "title": "Авторы",
+    "url_name": "authors"
+  }
+},
+{
+  "model": "quotes.menu",
+  "pk": 2,
+  "fields": {
+    "title": "Категории",
+    "url_name": "categories"
+  }
+},
+{
+  "model": "quotes.menu",
+  "pk": 3,
+  "fields": {
+    "title": "Добавить цитату",
+    "url_name": "create_quote"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 1,
+  "fields": {
+    "name": "Марк Аврелий",
+    "biography": "Марк Авре́лий Антони́н — римский император из династии Антонинов, философ, представитель позднего стоицизма, последователь Эпиктета. Последний из пяти хороших императоров.",
+    "slug": "mark-avrelii",
+    "photo": "photos/2025/01/13/марк_аврелий.jfif"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 19,
+  "fields": {
+    "name": "Конфуций",
+    "biography": "Конфу́ций — древний мыслитель и философ Китая. Его учение оказало глубокое влияние на жизнь Китая и Восточной Азии, став основой философской системы, известной как конфуцианство.",
+    "slug": "konfutsii",
+    "photo": "photos/2025/01/18/Конфуций_NQLH3TK.jfif"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 20,
+  "fields": {
+    "name": "Ги Де Мопассан",
+    "biography": "Ги де Мопасса́н — французский писатель, автор многих знаменитых рассказов, романов и повестей.",
+    "slug": "gi-de-mopassan",
+    "photo": "photos/2025/01/20/2440.jpg"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 22,
+  "fields": {
+    "name": "Альберт Эйнштейн",
+    "biography": "Альбе́рт Эйнште́йн — физик-теоретик, один из основателей современной теоретической физики, лауреат Нобелевской премии по физике 1921 года, общественный деятель-гуманист. Жил в Германии , Швейцарии и США . Почётный доктор около 20 ведущих университетов мира, член многих Академий наук, в том числе иностранный почётный член АН СССР .",
+    "slug": "albert-einshtein",
+    "photo": "photos/2025/01/20/albert-einstein.300w.webp"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 23,
+  "fields": {
+    "name": "Брюс Ли",
+    "biography": "Брюс Ли — гонконгский и американский киноактёр, режиссёр, сценарист, продюсер, популяризатор и реформатор в области китайских боевых искусств, постановщик боевых сцен и философ, основоположник стиля Джит Кун-До.",
+    "slug": "brius-li",
+    "photo": "photos/2025/01/20/bruce-lee_NdjE3Qf.300w.webp"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 24,
+  "fields": {
+    "name": "Лев Толстой",
+    "biography": "Граф Лев Никола́евич Толсто́й — один из наиболее известных русских писателей и мыслителей, один из величайших писателей мира. Участник обороны Севастополя. Просветитель, публицист, религиозный мыслитель, его авторитетное мнение послужило причиной возникновения нового религиозно-нравственного течения — толстовства. Член-корреспондент Императорской Академии наук , почётный академик по разряду изящной словесности .",
+    "slug": "lev-tolstoi",
+    "photo": "photos/2025/01/20/leo-tolstoy_roXogPB.300w.webp"
+  }
+},
+{
+  "model": "quotes.authors",
+  "pk": 27,
+  "fields": {
+    "name": "New Test Author",
+    "biography": "",
+    "slug": "new-test-author",
+    "photo": ""
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 1,
+  "fields": {
+    "name": "Фильм",
+    "slug": "film"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 2,
+  "fields": {
+    "name": "Книга",
+    "slug": "kniga"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 3,
+  "fields": {
+    "name": "Известная личность",
+    "slug": "izvestnaya-lichnost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 35,
+  "fields": {
+    "name": "Бездействие",
+    "slug": "bezdeistvie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 36,
+  "fields": {
+    "name": "Пассивность",
+    "slug": "passivnost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 37,
+  "fields": {
+    "name": "Благородство",
+    "slug": "blagorodstvo"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 38,
+  "fields": {
+    "name": "Мудрые цитаты",
+    "slug": "mudrye-tsitaty"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 39,
+  "fields": {
+    "name": "Зло",
+    "slug": "zlo"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 40,
+  "fields": {
+    "name": "Мотивирующая цитата",
+    "slug": "motiviruiushchaia-tsitata"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 41,
+  "fields": {
+    "name": "Дети",
+    "slug": "deti"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 42,
+  "fields": {
+    "name": "Путь",
+    "slug": "put"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 43,
+  "fields": {
+    "name": "Жизненные цитаты",
+    "slug": "zhiznennye-tsitaty"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 44,
+  "fields": {
+    "name": "Планирование",
+    "slug": "planirovanie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 45,
+  "fields": {
+    "name": "Срок",
+    "slug": "srok"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 46,
+  "fields": {
+    "name": "Прибыль",
+    "slug": "pribyl"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 47,
+  "fields": {
+    "name": "Мотивирующие цитаты",
+    "slug": "motiviruiushchie-tsitaty"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 48,
+  "fields": {
+    "name": "Советы",
+    "slug": "sovety"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 49,
+  "fields": {
+    "name": "Воспитание",
+    "slug": "vospitanie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 50,
+  "fields": {
+    "name": "Общение",
+    "slug": "obshchenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 51,
+  "fields": {
+    "name": "Толерантность",
+    "slug": "tolerantnost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 52,
+  "fields": {
+    "name": "Спокойствие",
+    "slug": "spokoistvie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 53,
+  "fields": {
+    "name": "Мудрость",
+    "slug": "mudrost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 54,
+  "fields": {
+    "name": "Саморазвитие",
+    "slug": "samorazvitie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 55,
+  "fields": {
+    "name": "Духовный рост",
+    "slug": "dukhovnyi-rost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 56,
+  "fields": {
+    "name": "Духовность",
+    "slug": "dukhovnost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 57,
+  "fields": {
+    "name": "Самолюбие",
+    "slug": "samoliubie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 58,
+  "fields": {
+    "name": "Мнение",
+    "slug": "mnenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 59,
+  "fields": {
+    "name": "Труд",
+    "slug": "trud"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 60,
+  "fields": {
+    "name": "Радость",
+    "slug": "radost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 61,
+  "fields": {
+    "name": "Покой",
+    "slug": "pokoi"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 62,
+  "fields": {
+    "name": "Бог",
+    "slug": "bog"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 63,
+  "fields": {
+    "name": "Добро",
+    "slug": "dobro"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 64,
+  "fields": {
+    "name": "Мир",
+    "slug": "mir"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 65,
+  "fields": {
+    "name": "Самопознание",
+    "slug": "samopoznanie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 66,
+  "fields": {
+    "name": "Описание",
+    "slug": "opisanie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 67,
+  "fields": {
+    "name": "Жизнь и смерть",
+    "slug": "zhizn-i-smert"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 68,
+  "fields": {
+    "name": "Любовь",
+    "slug": "liubov"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 69,
+  "fields": {
+    "name": "Красивые цитаты",
+    "slug": "krasivye-tsitaty"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 70,
+  "fields": {
+    "name": "Прекрасное",
+    "slug": "prekrasnoe"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 71,
+  "fields": {
+    "name": "Поцелуи",
+    "slug": "potselui"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 72,
+  "fields": {
+    "name": "Умение",
+    "slug": "umenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 73,
+  "fields": {
+    "name": "Страх смерти",
+    "slug": "strakh-smerti"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 74,
+  "fields": {
+    "name": "Грустные цитаты",
+    "slug": "grustnye-tsitaty"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 75,
+  "fields": {
+    "name": "Жизнь",
+    "slug": "zhizn"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 76,
+  "fields": {
+    "name": "Равновесие",
+    "slug": "ravnovesie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 77,
+  "fields": {
+    "name": "Движение",
+    "slug": "dvizhenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 78,
+  "fields": {
+    "name": "Учение",
+    "slug": "uchenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 79,
+  "fields": {
+    "name": "Удовольствие",
+    "slug": "udovolstvie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 80,
+  "fields": {
+    "name": "Время",
+    "slug": "vremia"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 81,
+  "fields": {
+    "name": "Насилие",
+    "slug": "nasilie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 82,
+  "fields": {
+    "name": "Независимость",
+    "slug": "nezavisimost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 83,
+  "fields": {
+    "name": "Технологии",
+    "slug": "tekhnologii"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 84,
+  "fields": {
+    "name": "Поэзия",
+    "slug": "poeziia"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 85,
+  "fields": {
+    "name": "Наука",
+    "slug": "nauka"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 86,
+  "fields": {
+    "name": "Музыка",
+    "slug": "muzyka"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 87,
+  "fields": {
+    "name": "Мышление",
+    "slug": "myshlenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 88,
+  "fields": {
+    "name": "Сравнение",
+    "slug": "sravnenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 89,
+  "fields": {
+    "name": "Счастье",
+    "slug": "schaste"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 90,
+  "fields": {
+    "name": "Пацифизм",
+    "slug": "patsifizm"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 91,
+  "fields": {
+    "name": "Человечество",
+    "slug": "chelovechestvo"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 92,
+  "fields": {
+    "name": "Мировоззрение",
+    "slug": "mirovozzrenie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 93,
+  "fields": {
+    "name": "Развитие",
+    "slug": "razvitie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 94,
+  "fields": {
+    "name": "Личность",
+    "slug": "lichnost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 95,
+  "fields": {
+    "name": "Смысл жизни",
+    "slug": "smysl-zhizni"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 96,
+  "fields": {
+    "name": "Хвастовство",
+    "slug": "khvastovstvo"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 97,
+  "fields": {
+    "name": "Дураки",
+    "slug": "duraki"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 98,
+  "fields": {
+    "name": "Слава",
+    "slug": "slava"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 99,
+  "fields": {
+    "name": "Ценность",
+    "slug": "tsennost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 100,
+  "fields": {
+    "name": "Техника",
+    "slug": "tekhnika"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 101,
+  "fields": {
+    "name": "Познавательные цитаты",
+    "slug": "poznavatelnye-tsitaty"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 102,
+  "fields": {
+    "name": "Сила",
+    "slug": "sila"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 103,
+  "fields": {
+    "name": "Дисциплина",
+    "slug": "distsiplina"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 104,
+  "fields": {
+    "name": "Разум",
+    "slug": "razum"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 105,
+  "fields": {
+    "name": "Патриотизм",
+    "slug": "patriotizm"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 106,
+  "fields": {
+    "name": "Природа",
+    "slug": "priroda"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 107,
+  "fields": {
+    "name": "Созерцание",
+    "slug": "sozertsanie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 108,
+  "fields": {
+    "name": "Воспоминание",
+    "slug": "vospominanie"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 109,
+  "fields": {
+    "name": "Животные",
+    "slug": "zhivotnye"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 110,
+  "fields": {
+    "name": "Единство",
+    "slug": "edinstvo"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 111,
+  "fields": {
+    "name": "Русские литераторы",
+    "slug": "russkie-literatory"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 112,
+  "fields": {
+    "name": "Совесть",
+    "slug": "sovest"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 113,
+  "fields": {
+    "name": "Сравнения",
+    "slug": "sravneniia"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 114,
+  "fields": {
+    "name": "Бедность",
+    "slug": "bednost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 115,
+  "fields": {
+    "name": "Богатство",
+    "slug": "bogatstvo"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 116,
+  "fields": {
+    "name": "Глупость",
+    "slug": "glupost"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 117,
+  "fields": {
+    "name": "Человек",
+    "slug": "chelovek"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 119,
+  "fields": {
+    "name": "Литература",
+    "slug": "literatura"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 120,
+  "fields": {
+    "name": "Cat_1",
+    "slug": "cat-1"
+  }
+},
+{
+  "model": "quotes.category",
+  "pk": 121,
+  "fields": {
+    "name": "Cat_2",
+    "slug": "cat-2"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 1,
+  "fields": {
+    "name": "Can add log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "add_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 2,
+  "fields": {
+    "name": "Can change log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "change_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 3,
+  "fields": {
+    "name": "Can delete log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "delete_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 4,
+  "fields": {
+    "name": "Can view log entry",
+    "content_type": [
+      "admin",
+      "logentry"
+    ],
+    "codename": "view_logentry"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 5,
+  "fields": {
+    "name": "Can add permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "add_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 6,
+  "fields": {
+    "name": "Can change permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "change_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 7,
+  "fields": {
+    "name": "Can delete permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "delete_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 8,
+  "fields": {
+    "name": "Can view permission",
+    "content_type": [
+      "auth",
+      "permission"
+    ],
+    "codename": "view_permission"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 9,
+  "fields": {
+    "name": "Can add group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "add_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 10,
+  "fields": {
+    "name": "Can change group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "change_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 11,
+  "fields": {
+    "name": "Can delete group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "delete_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 12,
+  "fields": {
+    "name": "Can view group",
+    "content_type": [
+      "auth",
+      "group"
+    ],
+    "codename": "view_group"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 13,
+  "fields": {
+    "name": "Can add user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "add_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 14,
+  "fields": {
+    "name": "Can change user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "change_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 15,
+  "fields": {
+    "name": "Can delete user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "delete_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 16,
+  "fields": {
+    "name": "Can view user",
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "codename": "view_user"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 17,
+  "fields": {
+    "name": "Can add content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "add_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 18,
+  "fields": {
+    "name": "Can change content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "change_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 19,
+  "fields": {
+    "name": "Can delete content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "delete_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 20,
+  "fields": {
+    "name": "Can view content type",
+    "content_type": [
+      "contenttypes",
+      "contenttype"
+    ],
+    "codename": "view_contenttype"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 21,
+  "fields": {
+    "name": "Can add session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "add_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 22,
+  "fields": {
+    "name": "Can change session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "change_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 23,
+  "fields": {
+    "name": "Can delete session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "delete_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 24,
+  "fields": {
+    "name": "Can view session",
+    "content_type": [
+      "sessions",
+      "session"
+    ],
+    "codename": "view_session"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 25,
+  "fields": {
+    "name": "Can add authors",
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "codename": "add_authors"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 26,
+  "fields": {
+    "name": "Can change authors",
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "codename": "change_authors"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 27,
+  "fields": {
+    "name": "Can delete authors",
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "codename": "delete_authors"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 28,
+  "fields": {
+    "name": "Can view authors",
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "codename": "view_authors"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 29,
+  "fields": {
+    "name": "Can add category",
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "codename": "add_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 30,
+  "fields": {
+    "name": "Can change category",
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "codename": "change_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 31,
+  "fields": {
+    "name": "Can delete category",
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "codename": "delete_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 32,
+  "fields": {
+    "name": "Can view category",
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "codename": "view_category"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 33,
+  "fields": {
+    "name": "Can add quotes",
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "codename": "add_quotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 34,
+  "fields": {
+    "name": "Can change quotes",
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "codename": "change_quotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 35,
+  "fields": {
+    "name": "Can delete quotes",
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "codename": "delete_quotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 36,
+  "fields": {
+    "name": "Can view quotes",
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "codename": "view_quotes"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 37,
+  "fields": {
+    "name": "Can add menu",
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "codename": "add_menu"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 38,
+  "fields": {
+    "name": "Can change menu",
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "codename": "change_menu"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 39,
+  "fields": {
+    "name": "Can delete menu",
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "codename": "delete_menu"
+  }
+},
+{
+  "model": "auth.permission",
+  "pk": 40,
+  "fields": {
+    "name": "Can view menu",
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "codename": "view_menu"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$uuwmdMNrSeT2aktMncUMgO$7uHlFVkhYISKiZv9TSw9vmBfp5CbEY1ohp/CDJwHH1A=",
+    "last_login": "2025-01-28T16:22:34.508Z",
+    "is_superuser": true,
+    "username": "vitya",
+    "first_name": "",
+    "last_name": "",
+    "email": "vitya.bashkov@mail.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-12-13T10:39:17.940Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 6,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$aAT5uHklDeDy6zR0wjLlOO$8iZ72ieeKYK0oLvM8C36VL9VkKIMOJPifar8Hdb5fqk=",
+    "last_login": "2025-01-27T07:04:26.141Z",
+    "is_superuser": false,
+    "username": "dd",
+    "first_name": "",
+    "last_name": "",
+    "email": "dd@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-16T17:55:55Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "!d6kL8ILw7ISCzlroukmULPzdtpUEigt6qZarNWck",
+    "last_login": "2025-01-18T06:54:44.135Z",
+    "is_superuser": false,
+    "username": "vitos63",
+    "first_name": "",
+    "last_name": "",
+    "email": "",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-17T12:26:36.541Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$jrjBex7obsQuYXBi950XLj$Db+a8/NkIzh4fTAGYIFO9N9niCP7bBRIWnW5rqvpEa0=",
+    "last_login": "2025-01-18T10:32:38.249Z",
+    "is_superuser": false,
+    "username": "user1",
+    "first_name": "",
+    "last_name": "",
+    "email": "user1@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-18T07:54:27.081Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$N0rFwjf8qKZDgOwNyUpUnZ$fk7r7ABPN9TpMHvRk8buwEiA2GQtquYdJ+49oVgcZVA=",
+    "last_login": "2025-01-20T16:14:19.458Z",
+    "is_superuser": false,
+    "username": "vika",
+    "first_name": "",
+    "last_name": "",
+    "email": "vikakeler21@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-20T16:04:39.843Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 12,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$jD6DWHkXib4MzQpfI56jxS$hQc+3WSJDr6BQpJssRX9uFXIA2fGfuL7IXNwhezod+I=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "new_user_1",
+    "first_name": "",
+    "last_name": "",
+    "email": "new_user_1@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-22T14:54:02.993Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 14,
+  "fields": {
+    "password": "pbkdf2_sha256$870000$WNO8zddAaGCiraVqoHAPSK$7gKr7+aICQkoNgPipgl/gaeU6p0u/gklvAwxjgehDDc=",
+    "last_login": null,
+    "is_superuser": false,
+    "username": "user3",
+    "first_name": "user3",
+    "last_name": "",
+    "email": "user3@mail.ru",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2025-01-25T08:37:36.132Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 36,
+  "fields": {
+    "quote": "Видеть, что правильно, и не делать этого — значит испытывать недостаток мужества.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      35,
+      36
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 38,
+  "fields": {
+    "quote": "Если естество в человеке одолеет культуру, – получится дикарь. Если культура одолеет естество, — получится книжник. Только пропорциональное соединение природного и человеческого дает истинное благородство.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      37,
+      38
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 39,
+  "fields": {
+    "quote": "Боритесь со злом внутри вас, а не со злом внутри других.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      40,
+      39
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 43,
+  "fields": {
+    "quote": "Самое прекрасное зрелище на свете — вид ребёнка, уверенно идущего по жизненной дороге после того, как вы показали ему путь.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      41,
+      42,
+      43
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 44,
+  "fields": {
+    "quote": "Если ваш план рассчитан на год — сажайте рис.\r\nЕсли на десять лет — сажайте деревья.\r\nЕсли на сто лет — воспитывайте детей.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      44,
+      45,
+      46,
+      47
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 45,
+  "fields": {
+    "quote": "Советы мы принимаем каплями, зато даем ведрами.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      48
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 46,
+  "fields": {
+    "quote": "Трудно воспитывать только женщину и маленького человека (ребёнка). Если их приближаешь — они теряют почтительность. Если их отдаляешь — они обижаются.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      49,
+      50,
+      43
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 47,
+  "fields": {
+    "quote": "Благородный муж чтит достойных людей и терпимо относится ко всем другим, хвалит хороших людей и жалеет неумелых. Обладай я великими достоинствами, к кому бы я был нетерпим? А будь я недостойным человеком, меня отвергли бы другие, и как тогда я мог бы их отвергнуть?",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      51,
+      43
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 48,
+  "fields": {
+    "quote": "Трудней всего общаться с женщиной и малым человеком. Приблизишь их к себе — и станут дерзкими, а удалишь — озлобятся.",
+    "author": 19,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      50,
+      43
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 49,
+  "fields": {
+    "quote": "Человек бранит, оскорбляет тебя-не поддавайся ему, не становись на тот путь, на который он хочет завести тебя, не делай того же, что он.",
+    "author": 1,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      52,
+      53,
+      55,
+      56,
+      54
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 50,
+  "fields": {
+    "quote": "Все мы любим себя, больше чем других, но прислушивайся к чужому мнению больше, чем к собственному.",
+    "author": 1,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      57,
+      58
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 51,
+  "fields": {
+    "quote": "Хоть бы и с трудом тебе давалось что-нибудь – не признавай это невозможным для человека, а напротив, что возможно и свойственно человеку, то считай доступным и для себя.",
+    "author": 1,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      59
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 52,
+  "fields": {
+    "quote": "Несправедливый, делая себя злым, себе же делает зло.",
+    "author": 1,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      39
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 53,
+  "fields": {
+    "quote": "Ищи радости и покоя единственно в том, чтобы от общественного деяния переходить к общественному деянию, памятуя о боге.",
+    "author": 1,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      60,
+      61,
+      62,
+      38
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 54,
+  "fields": {
+    "quote": "Против доброты невозможно устоять. Что может сделать вам даже самый непонятливый человек, если вы постоянно добры к нему?",
+    "author": 1,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      64,
+      65,
+      63
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 55,
+  "fields": {
+    "quote": "Ей так хотелось нравиться, быть обольстительной и иметь успех в обществе, хотелось, чтобы другие женщины ей завидовали.",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      40,
+      2,
+      66
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 56,
+  "fields": {
+    "quote": "Дышать, пить, есть, спать, трудится, мечтать — всё это значит умирать. Жить, наконец, — тоже значит умирать!",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      67
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 58,
+  "fields": {
+    "quote": "Видишь ли, сестра, очень часто мы любим не мужчин, а саму любовь. И в тот вечер твоим настоящим любовником был лунный свет.",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      69,
+      68
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 59,
+  "fields": {
+    "quote": "Мне кажется, что когда любишь, то хочется любить ещё сильнее при виде прекрасного, что нас волнует.",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      70,
+      69,
+      68
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 60,
+  "fields": {
+    "quote": "Но стоит ли целоваться потому только, что вам нравится вид местности?",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      71
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 61,
+  "fields": {
+    "quote": "При известной сноровке можно добиться чего угодно.",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      40,
+      72
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 62,
+  "fields": {
+    "quote": "На что бы я ни взглянул, …все напоминает мне о том, что спустя несколько дней я ничего больше не увижу… Как это ужасно… не видеть ничего… ничего из того, что существует… самых простых вещей… стаканов… тарелок… кроватей, на которых так хорошо отдыхать… экипажей. Как приятны эти вечерние прогулки в экипаже… Я так любил все это!",
+    "author": 20,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      73,
+      74
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 63,
+  "fields": {
+    "quote": "Жизнь — как вождение велосипеда. Чтобы сохранить равновесие, ты должен двигаться.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      76,
+      77,
+      75
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 64,
+  "fields": {
+    "quote": "Луч­ший спо­соб обу­че­ния — ко­гда ты де­ла­ешь что-ни­будь с та­ким удо­воль­стви­ем, что не за­ме­ча­ешь, как ле­тит вре­мя.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      78,
+      80,
+      38,
+      79
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 65,
+  "fields": {
+    "quote": "Героизм по приказу, бессмысленное насилие и вся эта отвратительная чушь, которая называется патриотизмом, — как я их ненавижу! Война кажется мне подлой, презренной вещью: я бы предпочел, чтобы меня разрубили на куски, чем принимать участие в таком отвратительном деле.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      74,
+      81
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 66,
+  "fields": {
+    "quote": "Делать своё дело хорошо — вот истинное удовольствие. Это даёт вам независимость от того балагана, в котором мы все рождены.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      40,
+      79,
+      82,
+      75
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 67,
+  "fields": {
+    "quote": "Стало чудовищно очевидно, что наши технологии превзошли нашу человечность.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      83
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 68,
+  "fields": {
+    "quote": "В научном мышлении всегда присутствует элемент поэзии. Настоящая наука и настоящая музыка требуют однородного мыслительного процесса.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      85,
+      86,
+      87,
+      88,
+      84
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 69,
+  "fields": {
+    "quote": "Я живу, а это главная причина быть счастливым.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      89,
+      75
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 70,
+  "fields": {
+    "quote": "Мой пацифизм — это инстинктивное чувство, которое владеет мной потому, что убийство человека отвратительно. Моё отношение исходит не из какой-либо умозрительной теории, а основано на глубочайшей антипатии к любому виду жестокости и ненависти.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      90,
+      81,
+      91,
+      92
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 71,
+  "fields": {
+    "quote": "Если вы хотите изменить что-то малое в своей жизни — измените отношение, но если вам нужны большие перемены — меняйте мышление.",
+    "author": 22,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      93,
+      94,
+      92,
+      95
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 72,
+  "fields": {
+    "quote": "Хвастовство — секунда славы дурака.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      96,
+      97,
+      98
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 73,
+  "fields": {
+    "quote": "Тренируйся с теми, кто сильнее. Не сдавайся там, где сдаются другие. И победишь там, где победить нельзя.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      40
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 74,
+  "fields": {
+    "quote": "Чем больше мы ценим вещи, тем меньше мы ценим самих себя.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      53,
+      38,
+      99
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 75,
+  "fields": {
+    "quote": "Чем сложнее метод, тем меньше свободы. Придерживаясь методов и правил, мы создаём себе ограничения. Если кто-то хватает тебя, бей. Все эти продвинутые техники не функциональны.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      100,
+      101
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 76,
+  "fields": {
+    "quote": "Вы будете продолжать страдать, если и дальше будете эмоционально реагировать на всё, что вам говорят. Истинная сила — это сесть, откинувшись назад и понаблюдать за всем этим это с логикой. Если слова контролируют вас, это означает, что любой может контролировать вас. Выдохните и позвольте этим вещам пройти мимо.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      102
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 77,
+  "fields": {
+    "quote": "Дисциплина — это не ограничение свободы. Это отсечение всего лишнего.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      103,
+      43
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 78,
+  "fields": {
+    "quote": "Не проси о легкой жизни. Проси сил, чтобы справиться с тяжелой.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      40
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 79,
+  "fields": {
+    "quote": "Революционизируй свой разум.",
+    "author": 23,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      104
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 81,
+  "fields": {
+    "quote": "Заботиться нам надо не о патриотизме, а о том, чтобы, внося в жизнь тот свет, который есть в нас, изменять ее и приближать к тому идеалу, который стоит перед нами.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      105
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 82,
+  "fields": {
+    "quote": "Умиление и восторг, которые мы испытываем от созерцания природы, — это воспоминание о том времени, когда мы были животными, деревьями, цветами, землей. Точнее: это — сознание единства во всем, скрываемое от нас временем.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      108,
+      109,
+      106,
+      107,
+      110,
+      69
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 83,
+  "fields": {
+    "quote": "Это писатель — как писатель художественный, если не выше, то уже наверное равный нашим первым писателям. Очень поучительно читать его теперь. И хороший, искренний человек. Человек, выдающийся по силе, уму, искренности.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      101,
+      111
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 84,
+  "fields": {
+    "quote": "У вас есть все, что нужно, — сжатый, сильный, настоящий язык, характерность, оставшаяся у вас одних, не юмор, а то, что производит веселый смех, и по содержанию — любовь и потому знание истинных интересов жизни народа.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      101,
+      111
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 85,
+  "fields": {
+    "quote": "Счастья в жизни нет, есть только зарницы его. Цените их, живите ими. Не ждите многого от жизни. Лучшего времени, чем теперь, у вас не будет...",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      89
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 86,
+  "fields": {
+    "quote": "Я хочу, чтобы любовь к миру перестала быть робким стремлением народов, приходящих в ужас при виде бедствий войны, а чтоб она стала непоколебимым требованием честной совести.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      112,
+      68
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 87,
+  "fields": {
+    "quote": "Надо помнить, что мы не на месте, а плывем на большом пароходе, и у капитана есть неизвестный нам список, где и когда кого высадить. Пока же нас не высаживают, что же мы можем делать другого, как только то, чтобы, исполняя закон, установленный на пароходе, стараться в мире, согласии и любви с сотоварищами провести определенное нам время.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      68
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 88,
+  "fields": {
+    "quote": "Жизнь как шаги ребенка, которого мать выпустила из объятий и опять примет.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      75,
+      113
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 89,
+  "fields": {
+    "quote": "Думал о том, что если служить людям писанием, то одно, на что я имею право, что должен делать, это — обличать богатых в их неправде и открывать бедным обман, в котором их держат.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      114,
+      115
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 90,
+  "fields": {
+    "quote": "Зло можно делать сообща. Добро можно делать только поодиночке.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      63,
+      39
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 91,
+  "fields": {
+    "quote": "Сначала поражаешься, почему людям глупым свойственны такие уверенные, убедительные интонации. Но так и должно быть. Иначе бы их никто не слушал.",
+    "author": 24,
+    "status": "Published",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      117,
+      116
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 94,
+  "fields": {
+    "quote": "Я вступил в литературную жизнь, как метеор, и исчезну из нее, как молния.",
+    "author": 20,
+    "status": "Under consideration",
+    "user": [
+      "dd"
+    ],
+    "category": [
+      88,
+      2,
+      119
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 104,
+  "fields": {
+    "quote": "New Test Quote",
+    "author": 27,
+    "status": "Under consideration",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      120,
+      121
+    ]
+  }
+},
+{
+  "model": "quotes.quotes",
+  "pk": 105,
+  "fields": {
+    "quote": "New Test Quote",
+    "author": 27,
+    "status": "Under consideration",
+    "user": [
+      "vitya"
+    ],
+    "category": [
+      120,
+      121
+    ]
+  }
+},
+
+{
+  "model": "social_django.usersocialauth",
+  "pk": 1,
+  "fields": {
+    "user": [
+      "vitos63"
+    ],
+    "provider": "github",
+    "uid": "158137246",
+    "extra_data": {
+      "id": 158137246,
+      "login": "vitos63",
+      "expires": null,
+      "auth_time": 1737183284,
+      "token_type": "bearer",
+      "access_token": "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"
+    },
+    "created": "2025-01-17T12:26:36.555Z",
+    "modified": "2025-01-18T06:54:44.122Z"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-12-13T10:41:07.383Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Authors object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-12-13T10:41:45.193Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Category object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-12-13T10:41:52.613Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Category object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-12-13T10:41:56.266Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "1",
+    "object_repr": "Quotes object (1)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-12-13T10:43:34.785Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Category object (3)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-12-13T10:51:59.214Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "1",
+    "object_repr": "Quotes object (1)",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-12-13T10:52:09.437Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "1",
+    "object_repr": "Quotes object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Quotes\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-12-13T17:51:00.921Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "2",
+    "object_repr": "Quotes object (2)",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-12-13T18:34:14.697Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Authors object (1)",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0411\\u0438\\u043e\\u0433\\u0440\\u0430\\u0444\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-12-13T18:46:38.491Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-12-13T18:46:58.900Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Известная личность",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-12-13T18:47:07.459Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Книга",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-12-13T18:47:12.901Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Фильм",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-12-13T18:52:48.795Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-12-13T18:53:34.286Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-12-13T18:54:10.104Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "3",
+    "object_repr": "Известная личность",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-12-13T18:54:14.289Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "2",
+    "object_repr": "Книга",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-12-13T18:54:18.532Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "1",
+    "object_repr": "Фильм",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Slug\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-12-23T18:05:52.444Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "2",
+    "object_repr": "Не смерти должен бояться человек, он должен бояться никогда не начать жить…",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0438\\u0442\\u0430\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-12-23T18:05:59.687Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "1",
+    "object_repr": "Если вас раздражает некий предмет, то виноват в этом не он сам, а ваше суждение о нём. И в ваших силах изменить это суждение.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0426\\u0438\\u0442\\u0430\\u0442\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2025-01-13T11:33:09.145Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "object_id": "1",
+    "object_repr": "Авторы",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2025-01-13T11:53:29.914Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "object_id": "2",
+    "object_repr": "Категории",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2025-01-13T12:41:00.907Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u0432\\u0442\\u043e\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2025-01-13T12:52:48.078Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2025-01-13T12:56:15.167Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u0432\\u0442\\u043e\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2025-01-13T12:56:20.873Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "1",
+    "object_repr": "Марк Аврелий",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0430\\u0432\\u0442\\u043e\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2025-01-14T15:36:40.645Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "3",
+    "object_repr": "1234",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2025-01-14T15:37:02.540Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "4",
+    "object_repr": "ddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2025-01-14T15:37:02.541Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "2",
+    "object_repr": "ддд",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2025-01-14T18:39:52.110Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "object_id": "3",
+    "object_repr": "Добавить цитату",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2025-01-14T18:43:19.372Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "object_id": "3",
+    "object_repr": "Добавить цитату",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u042d\\u043d\\u0434\\u043f\\u043e\\u0438\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2025-01-15T07:08:35.261Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "4",
+    "object_repr": "Крутой",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2025-01-15T07:09:14.477Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "6",
+    "object_repr": "Крутой",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2025-01-15T07:10:54.765Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "8",
+    "object_repr": "Крутой",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2025-01-15T07:18:53.059Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "11",
+    "object_repr": "Крутой",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2025-01-15T07:19:01.489Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "2",
+    "object_repr": "Витя Лошков",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2025-01-15T07:42:46.203Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "3",
+    "object_repr": "dddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2025-01-15T07:42:55.505Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "6",
+    "object_repr": "Dddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2025-01-15T07:42:55.505Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "4",
+    "object_repr": "Витя Лошков",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2025-01-15T07:43:08.427Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "16",
+    "object_repr": "Ddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2025-01-15T07:43:08.427Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "15",
+    "object_repr": "Dd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2025-01-15T10:55:39.737Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "object_id": "3",
+    "object_repr": "Добавить цитату",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u042d\\u043d\\u0434\\u043f\\u043e\\u0438\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2025-01-15T11:10:23.656Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "menu"
+    ],
+    "object_id": "3",
+    "object_repr": "Добавить цитату",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u042d\\u043d\\u0434\\u043f\\u043e\\u0438\\u043d\\u0442\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2025-01-16T17:55:27.634Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "5",
+    "object_repr": "dd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2025-01-16T17:55:55.978Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "dd",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2025-01-16T17:56:07.478Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "6",
+    "object_repr": "dd",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Email address\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2025-01-17T06:29:06.118Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "2",
+    "object_repr": "Не смерти должен бояться человек, он должен бояться никогда не начать жить…",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2025-01-18T09:16:59.575Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "31",
+    "object_repr": "as;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df,'s,ad;fas;df",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2025-01-18T10:14:07.308Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "29",
+    "object_repr": "Должно работать",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2025-01-18T10:18:54.474Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "30",
+    "object_repr": "И еще одна проверочка",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2025-01-18T10:20:59.293Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "28",
+    "object_repr": "sdfsdf",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2025-01-18T10:21:49.460Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "25",
+    "object_repr": "Я такой крутой",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "30",
+    "object_repr": "И еще одна проверочка",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "29",
+    "object_repr": "Должно работать",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "28",
+    "object_repr": "sdfsdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "27",
+    "object_repr": "lflflf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "26",
+    "object_repr": "Вот это даа",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "25",
+    "object_repr": "Я такой крутой",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "24",
+    "object_repr": "sd;lgdgmlmdl",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "23",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "22",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "21",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "20",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 64,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "19",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 65,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "18",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 66,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "17",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 67,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "16",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 68,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "15",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 69,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "14",
+    "object_repr": "saf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 70,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "13",
+    "object_repr": "фыа",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 71,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "12",
+    "object_repr": "asfd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 72,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "11",
+    "object_repr": "asdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 73,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "10",
+    "object_repr": "sasadfsda",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 74,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "9",
+    "object_repr": "asf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 75,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "8",
+    "object_repr": "asf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 76,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "7",
+    "object_repr": "ыываываыв",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 77,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "6",
+    "object_repr": "dd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 78,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "5",
+    "object_repr": "ddddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 79,
+  "fields": {
+    "action_time": "2025-01-18T15:43:16.158Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "4",
+    "object_repr": "dddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 80,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.212Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "23",
+    "object_repr": "Lll",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 81,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.213Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "22",
+    "object_repr": "Df",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 82,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.213Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "21",
+    "object_repr": "Wer",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 83,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.213Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "20",
+    "object_repr": "Sdsd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 84,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.213Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "19",
+    "object_repr": "F",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 85,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.213Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "18",
+    "object_repr": "Ddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 86,
+  "fields": {
+    "action_time": "2025-01-18T15:43:36.213Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "17",
+    "object_repr": "Dd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 87,
+  "fields": {
+    "action_time": "2025-01-18T15:43:47.951Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "14",
+    "object_repr": "User1",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 88,
+  "fields": {
+    "action_time": "2025-01-18T15:43:47.951Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "13",
+    "object_repr": "Dfdfgdfg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 89,
+  "fields": {
+    "action_time": "2025-01-18T15:43:47.951Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "12",
+    "object_repr": "Lllls",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 90,
+  "fields": {
+    "action_time": "2025-01-18T15:43:47.951Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "10",
+    "object_repr": "Llll",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 91,
+  "fields": {
+    "action_time": "2025-01-18T15:43:47.951Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "9",
+    "object_repr": "Df",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 92,
+  "fields": {
+    "action_time": "2025-01-18T15:43:47.951Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "8",
+    "object_repr": "Dddd",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 93,
+  "fields": {
+    "action_time": "2025-01-18T15:53:18.982Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "32",
+    "object_repr": "фыав",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 94,
+  "fields": {
+    "action_time": "2025-01-18T15:53:26.204Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "15",
+    "object_repr": "Конфуций",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 95,
+  "fields": {
+    "action_time": "2025-01-18T16:01:27.895Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "17",
+    "object_repr": "New_Author",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 96,
+  "fields": {
+    "action_time": "2025-01-18T16:01:27.895Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "16",
+    "object_repr": "Конфуций",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 97,
+  "fields": {
+    "action_time": "2025-01-18T16:01:51.754Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "31",
+    "object_repr": "321",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 98,
+  "fields": {
+    "action_time": "2025-01-18T16:01:51.754Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "30",
+    "object_repr": "123",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 99,
+  "fields": {
+    "action_time": "2025-01-18T16:01:51.754Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "29",
+    "object_repr": "Sdfsdf",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 100,
+  "fields": {
+    "action_time": "2025-01-18T16:01:51.754Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "24",
+    "object_repr": "Мотивирующие цитаты",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 101,
+  "fields": {
+    "action_time": "2025-01-18T16:07:26.068Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "18",
+    "object_repr": "Конфуций",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 102,
+  "fields": {
+    "action_time": "2025-01-18T16:07:35.440Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "32",
+    "object_repr": "Бездействие",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 103,
+  "fields": {
+    "action_time": "2025-01-18T16:07:51.957Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "1",
+    "object_repr": "Если вас раздражает некий предмет, то виноват в этом не он сам, а ваше суждение о нём. И в ваших силах изменить это суждение.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 104,
+  "fields": {
+    "action_time": "2025-01-18T16:11:01.478Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "36",
+    "object_repr": "Видеть, что правильно, и не делать этого — значит испытывать недостаток мужества.",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"Quotes\", \"\\u0421\\u0442\\u0430\\u0442\\u0443\\u0441\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 105,
+  "fields": {
+    "action_time": "2025-01-18T16:15:33.709Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "37",
+    "object_repr": "Если естество в человеке одолеет культуру, – получится дикарь. Если культура одолеет естество, — получится книжник. Только пропорциональное соединение природного и человеческого дает истинное благород",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 106,
+  "fields": {
+    "action_time": "2025-01-19T05:57:35.426Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "42",
+    "object_repr": "Боритесь со злом внутри вас, а не со злом внутри других.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 107,
+  "fields": {
+    "action_time": "2025-01-19T05:57:35.426Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "41",
+    "object_repr": "Боритесь со злом внутри вас, а не со злом внутри других.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 108,
+  "fields": {
+    "action_time": "2025-01-19T05:57:35.426Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "40",
+    "object_repr": "Боритесь со злом внутри вас, а не со злом внутри других.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 109,
+  "fields": {
+    "action_time": "2025-01-19T12:16:16.192Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "2",
+    "object_repr": "Не смерти должен бояться человек, он должен бояться никогда не начать жить…",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 110,
+  "fields": {
+    "action_time": "2025-01-19T12:16:16.192Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "1",
+    "object_repr": "Если вас раздражает некий предмет, то виноват в этом не он сам, а ваше суждение о нём. И в ваших силах изменить это суждение.",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 111,
+  "fields": {
+    "action_time": "2025-01-20T07:46:02.755Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "57",
+    "object_repr": "Лучше пернуть на толчке, чем обосраться в штаны",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 112,
+  "fields": {
+    "action_time": "2025-01-20T07:46:12.331Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "21",
+    "object_repr": "Виталик Работа",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 113,
+  "fields": {
+    "action_time": "2025-01-20T15:09:11.382Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "92",
+    "object_repr": "дадада",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 114,
+  "fields": {
+    "action_time": "2025-01-20T15:09:19.271Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "category"
+    ],
+    "object_id": "118",
+    "object_repr": "И еще одну",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 115,
+  "fields": {
+    "action_time": "2025-01-20T16:30:19.774Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "93",
+    "object_repr": "gggg",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 116,
+  "fields": {
+    "action_time": "2025-01-20T16:30:26.492Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "26",
+    "object_repr": "Пппп",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 117,
+  "fields": {
+    "action_time": "2025-01-20T16:30:26.492Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "authors"
+    ],
+    "object_id": "25",
+    "object_repr": "Дадада",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 118,
+  "fields": {
+    "action_time": "2025-01-22T13:09:08.368Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "10",
+    "object_repr": "new_user",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 119,
+  "fields": {
+    "action_time": "2025-01-22T14:17:02.642Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "11",
+    "object_repr": "user2",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 120,
+  "fields": {
+    "action_time": "2025-01-25T08:37:19.512Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "auth",
+      "user"
+    ],
+    "object_id": "13",
+    "object_repr": "user3",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 121,
+  "fields": {
+    "action_time": "2025-01-27T06:04:22.747Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "98",
+    "object_repr": "This is an inspirational quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 122,
+  "fields": {
+    "action_time": "2025-01-27T06:04:22.747Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "97",
+    "object_repr": "This is an inspirational quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 123,
+  "fields": {
+    "action_time": "2025-01-27T06:04:22.747Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "96",
+    "object_repr": "This is an inspirational quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 124,
+  "fields": {
+    "action_time": "2025-01-27T06:04:22.747Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "95",
+    "object_repr": "This is an inspirational quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 125,
+  "fields": {
+    "action_time": "2025-01-27T07:00:46.112Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "users",
+      "profile"
+    ],
+    "object_id": "2",
+    "object_repr": "Profile object (2)",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 126,
+  "fields": {
+    "action_time": "2025-01-28T12:46:04.202Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "103",
+    "object_repr": "New Test Quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 127,
+  "fields": {
+    "action_time": "2025-01-28T12:46:04.202Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "102",
+    "object_repr": "New Test Quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 128,
+  "fields": {
+    "action_time": "2025-01-28T12:46:04.202Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "101",
+    "object_repr": "New Test Quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 129,
+  "fields": {
+    "action_time": "2025-01-28T12:46:04.202Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "100",
+    "object_repr": "New Test Quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 130,
+  "fields": {
+    "action_time": "2025-01-28T12:46:04.202Z",
+    "user": [
+      "vitya"
+    ],
+    "content_type": [
+      "quotes",
+      "quotes"
+    ],
+    "object_id": "99",
+    "object_repr": "This is an inspirational quote",
+    "action_flag": 3,
+    "change_message": ""
+  }
+}
+]

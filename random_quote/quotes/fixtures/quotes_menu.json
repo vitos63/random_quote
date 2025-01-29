@@ -1,0 +1,1 @@
+[{"model": "quotes.menu", "pk": 1, "fields": {"title": "Авторы", "url_name": "authors"}}, {"model": "quotes.menu", "pk": 2, "fields": {"title": "Категории", "url_name": "categories"}}, {"model": "quotes.menu", "pk": 3, "fields": {"title": "Добавить цитату", "url_name": "create_quote"}}]
