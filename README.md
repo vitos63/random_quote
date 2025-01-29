@@ -20,7 +20,7 @@
 
     ```bash
     git clone https://github.com/vitos_63/random_quote.git
-    cd имя_репозитория
+    cd random_quote
     ```
 
 2. Создайте и активируйте виртуальное окружение:
