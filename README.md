@@ -18,7 +18,7 @@
 1. Клонируйте репозиторий:
 
     ```bash
-    git clone https://github.com/vitos_63/random_quote.git
+    git clone https://github.com/vitos63/random_quote.git
     ```
 
 2. Создайте и активируйте виртуальное окружение:
