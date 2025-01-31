@@ -1,10 +1,10 @@
+from random import choice
 from django.test import TestCase
 from django.urls import reverse
-from http import HTTPStatus
 from django.db.models import Q, Count
-from urllib.parse import urlencode
 from django.contrib.auth import get_user_model
-from random import choice
+from http import HTTPStatus
+from urllib.parse import urlencode
 from quotes.models import Authors, Category, Quotes
 
 class QuotePagesTestCase(TestCase):

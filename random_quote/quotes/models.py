@@ -1,8 +1,8 @@
 from django.db import models
-from slugify import slugify
 from django.urls import reverse
 from django.contrib.auth import get_user_model
-from .managers import AuthorManager, CategoryManager
+from slugify import slugify
+from quotes.managers import AuthorManager, CategoryManager
 
 class Menu(models.Model):
 

@@ -16,7 +16,7 @@ Including another URLconf
 """
 
 from django.urls import path
-from .views import AuthorQuotes, CategoryQuotes, CreateQuoteView, RandomQuoteView, SaveQuoteView, AuthorsView, CategoriesView, SearchView
+from quotes.views import AuthorQuotes, CategoryQuotes, CreateQuoteView, RandomQuoteView, SaveQuoteView, AuthorsView, CategoriesView, SearchView
 
 urlpatterns = [
     path('', RandomQuoteView.as_view(), name='home'),

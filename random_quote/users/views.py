@@ -1,15 +1,15 @@
-from django.shortcuts import redirect
+from django.shortcuts import redirect, get_object_or_404
 from django.contrib.auth.views import LoginView
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.views.generic import UpdateView, CreateView, ListView
 from django.contrib.auth.forms import AuthenticationForm
-from .forms import ProfileForm, RegisterUserForm
 from django.urls import reverse_lazy
-from random_quote.settings import DEFAULT_IMAGE
-from quotes.models import Quotes
+from users.forms import ProfileForm, RegisterUserForm
 from django.contrib import messages
 from django.contrib.auth import get_user_model
-
+from random_quote.settings import DEFAULT_IMAGE
+from quotes.models import Quotes
+from users.services.delete_saved_quotes_service import DeleteSavedQuotesService
 
 
 class RegisterUser(CreateView):
@@ -70,14 +70,14 @@ class ProfileUserDeleteSavedQuotesView(LoginRequiredMixin, UpdateView):
         return get_user_model().objects.get(id=self.request.user.id)
     
     def get(self, request, *args, **kwargs):
-        quote = Quotes.objects.get(id= self.kwargs['id'])
         user = self.get_object()
-        if quote in user.profile.saved_quotes.all():
-            user.profile.saved_quotes.remove(quote)
-            user.save()
+
+        if DeleteSavedQuotesService(self.kwargs['id'], user).delete():
             messages.success (self.request, 'Цитата успешно удалена')
+        
         else:
             messages.error(self.request, 'Цитата не найдена!')
+
         return redirect('users:saved_quotes')
 
 

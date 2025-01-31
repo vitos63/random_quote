@@ -1,12 +1,13 @@
 from django.shortcuts import render, redirect, get_object_or_404
 from django.views.generic import ListView, UpdateView, DetailView, CreateView, TemplateView
-from .models import Quotes, Authors, Category
-from django.contrib.auth.mixins import LoginRequiredMixin
-from .forms import CreateQuoteNewAuthorForm, CategorySearchForm
-from random_quote.settings import DEFAULT_IMAGE
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from django.urls import reverse_lazy
+from django.contrib.auth.mixins import LoginRequiredMixin
+from quotes.models import Quotes, Authors, Category
+from quotes.forms import CreateQuoteNewAuthorForm, CategorySearchForm
+from quotes.services.save_quote_service import SaveQuoteService
+from random_quote.settings import DEFAULT_IMAGE
 
 
 class RandomQuoteView(DetailView):
@@ -111,16 +112,11 @@ class SaveQuoteView(LoginRequiredMixin, UpdateView):
     
     def get(self, request, *args, **kwargs):
         user = self.get_object()
-        try:
-            quote = Quotes.objects.get(id=self.kwargs['id'])
-            if quote in user.profile.saved_quotes.all():
-                messages.success(self.request, 'Цитата уже сохранена')
-            else:
-                user.profile.saved_quotes.add(quote)
-                user.save()
-                messages.success (self.request, 'Цитата успешно сохранена')
-
-        except Quotes.DoesNotExist:
-            messages.error(self.request, 'Цитата не найдена!')
+        success_save_quote = SaveQuoteService(self.kwargs['id'], user).save_quote()
+        if success_save_quote:
+            messages.success(self.request,success_save_quote)
         
+        else:
+            messages.error(self.request, 'Цитата не найдена!')
+       
         return redirect('home')

@@ -1,7 +1,7 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django_select2.forms import ModelSelect2MultipleWidget, ModelSelect2Widget
-from .models import Quotes, Authors, Category
+from quotes.models import Quotes, Authors, Category
 
 class CreateQuoteNewAuthorForm(forms.ModelForm):
     author = forms.ModelChoiceField(queryset=Authors.objects.all(),required=False, label='Автор',

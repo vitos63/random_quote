@@ -1,5 +1,5 @@
-from .models import Menu
-from .forms import SearchForm
+from quotes.models import Menu
+from quotes.forms import SearchForm
 def menu_context(request):
     menu = []
     for title in Menu.objects.all():

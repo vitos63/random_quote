@@ -1,8 +1,7 @@
-from quotes.models import Quotes, Authors, Category
-from rest_framework import serializers
 from django.contrib.auth import get_user_model
+from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-
+from quotes.models import Quotes, Authors, Category
 
 class QuoteSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField()

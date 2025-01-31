@@ -2,12 +2,11 @@ from django.shortcuts import get_object_or_404
 from rest_framework.generics import RetrieveAPIView, ListAPIView, CreateAPIView, DestroyAPIView
 from rest_framework.views import APIView
 from rest_framework.response import Response
-from random import choice
-from quotes.models import Quotes, Authors, Category
-from .serializers import QuoteSerializer, AuthorSerializer, CategorySerializer, RegisterSerializer, CreateQuoteSerializer, SuggestedQuotesSerializer, SaveQuoteSerializer
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from rest_framework.exceptions import PermissionDenied
+from quotes.models import Quotes, Authors, Category
+from api_quotes.serializers import QuoteSerializer, AuthorSerializer, CategorySerializer, RegisterSerializer, CreateQuoteSerializer, SuggestedQuotesSerializer, SaveQuoteSerializer
 
 class RandomQuoteAPIView(RetrieveAPIView):
     serializer_class = QuoteSerializer

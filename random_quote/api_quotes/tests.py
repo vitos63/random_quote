@@ -2,15 +2,16 @@ from django.test import TestCase
 from django.urls import reverse
 from rest_framework.test import APIClient
 from rest_framework import status
+from django.contrib.auth import get_user_model
 from quotes.models import Quotes, Authors, Category
-from django.contrib.auth.models import User
+
 
 
 class APITestCase(TestCase):
     def setUp(self):
         
         self.client = APIClient()
-        self.user = User.objects.create_user(username='testuser', email='testuser@example.com', password='password123')
+        self.user = get_user_model().objects.create_user(username='testuser', email='testuser@example.com', password='password123')
         self.author = Authors.objects.create(name='Author 1', slug='author-1')
         self.category = Category.objects.create(name='Category 1', slug='category-1')
         self.quote = Quotes.objects.create(quote='Test Quote', author=self.author, status='Published')

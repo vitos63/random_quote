@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import RandomQuoteAPIView, AuthorsAPIView, CategoriesAPIView, AuthorQuotesAPIView,CategoryQuotesAPIView, SearchAPIView, RegisterAPIView, CreateQuoteAPIView, SuggestedQuotesAPIView, SavedQuotesAPIView, SaveQuoteAPIView, DeleteSavedQuotesAPIView
+from api_quotes.views import RandomQuoteAPIView, AuthorsAPIView, CategoriesAPIView, AuthorQuotesAPIView,CategoryQuotesAPIView, SearchAPIView, RegisterAPIView, CreateQuoteAPIView, SuggestedQuotesAPIView, SavedQuotesAPIView, SaveQuoteAPIView, DeleteSavedQuotesAPIView
 app_name= 'api_quotes'
 
 urlpatterns = [
