@@ -4,6 +4,8 @@ from django.contrib.auth import get_user_model
 from slugify import slugify
 from quotes.managers import AuthorManager, CategoryManager
 
+User=get_user_model()
+
 class Menu(models.Model):
 
     title = models.CharField(max_length=150, verbose_name='Меню')
@@ -15,12 +17,12 @@ class Menu(models.Model):
 
 class Quotes(models.Model):
     quote = models.TextField(verbose_name='Цитата', db_index=True)
-    author = models.ForeignKey('Authors', on_delete=models.CASCADE, related_name='quotes', verbose_name='Автор')
-    category = models.ManyToManyField('Category',related_name='category', verbose_name='quotes')
+    author = models.ForeignKey('Authors', on_delete=models.CASCADE, related_name='author_quotes', verbose_name='Автор')
+    category = models.ManyToManyField('Category',related_name='category_quotes', verbose_name='Категории')
     status = models.CharField(max_length=150, verbose_name='Статус', 
                               choices={'Published':'Опубликована','Rejected':'Отклонена','Under consideration':'На рассмотрении'}, 
                               default='Under consideration')
-    user = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, related_name='suggested_quotes', 
+    user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='suggested_quotes', 
                              verbose_name='Пользователь добавивший цитату', blank=True, null= True)
 
 

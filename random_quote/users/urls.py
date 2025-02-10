@@ -11,7 +11,7 @@ urlpatterns = [
     path('register/',RegisterUser.as_view(), name='register'),
     path('profile/suggested-quotes/',ProfileUserSuggestedQuotesView.as_view(), name='suggested_quotes'),
     path('profile/saved-quotes/',ProfileUserSavedQuotesView.as_view(), name='saved_quotes'),
-    path('profile/delete-saved-quotes/<int:id>',ProfileUserDeleteSavedQuotesView.as_view(), name='delete_saved_quotes'),
+    path('profile/delete-saved-quotes/<int:id>/',ProfileUserDeleteSavedQuotesView.as_view(), name='delete_saved_quotes'),
     
     path('edit-profile/',EditProfileUserView.as_view(), name='edit_profile'),
     path('password-reset/',PasswordResetView.as_view(success_url = reverse_lazy('users:password_reset_done'), 

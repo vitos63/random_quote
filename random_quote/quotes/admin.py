@@ -5,8 +5,9 @@ from .models import Menu
 
 @admin.register(Quotes)
 class QuotesAdmin(admin.ModelAdmin):
-    list_display = ['quote', 'author']
+    list_display = ['quote', 'author','author__biography', 'status']
     actions = ['set_published', 'set_rejected']
+    list_filter = ['status']
 
     @admin.action(description='Опубликовать выбранные цитаты')
     def set_published(self,request,queryset):

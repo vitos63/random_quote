@@ -51,12 +51,12 @@ class QuotePagesTestCase(TestCase):
         self.assertEqual(list(response.context['quotes_result']), 
                          list(Quotes.objects.filter(quote__icontains=response.context['search_field'], status='Published')))
         self.assertEqual(list(response.context['authors_result']), 
-                         list(Authors.objects.annotate(published_quotes_count = Count('quotes',
-                                        filter=Q(quotes__status='Published'))).filter(published_quotes_count__gt=0, 
+                         list(Authors.objects.annotate(published_quotes_count = Count('author_quotes',
+                                        filter=Q(author_quotes__status='Published'))).filter(published_quotes_count__gt=0, 
                                                                 name__icontains=response.context['search_field'])))
         self.assertEqual(list(response.context['categories_result']), 
-                         list(Category.objects.annotate(published_quotes_count = Count('category', 
-                                        filter=Q(category__status='Published'))).filter(published_quotes_count__gt=0,
+                         list(Category.objects.annotate(published_quotes_count = Count('category_quotes', 
+                                        filter=Q(category_quotes__status='Published'))).filter(published_quotes_count__gt=0,
                                                                 name__icontains=response.context['search_field'])))
         
     def test_redirect_create_quote_page(self):

@@ -15,5 +15,4 @@ urlpatterns = [
     path('suggested-quotes/', SuggestedQuotesAPIView.as_view(), name='suggested_quotes'),
     path('saved-quotes/', SavedQuotesAPIView.as_view(), name='saved_quotes'),
     path('delete-saved-quote/<int:pk>/', DeleteSavedQuotesAPIView.as_view(), name='delete_saved_quote'),
-
 ]

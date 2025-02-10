@@ -51,6 +51,7 @@ class ProfileUserSuggestedQuotesView(LoginRequiredMixin, ListView):
     def get_queryset(self):
         return Quotes.objects.select_related('author').prefetch_related('category').filter(user = self.request.user)
 
+
 class ProfileUserSavedQuotesView(LoginRequiredMixin, ListView):
     template_name = 'users/user_saved_quotes.html'
     context_object_name = 'saved_quotes'
