@@ -1,11 +1,11 @@
 from django import forms
 from django.core.exceptions import ValidationError
 from django_select2.forms import ModelSelect2MultipleWidget, ModelSelect2Widget
-from quotes.models import Quotes, Authors, Category
+from quotes.models import Quote, Author, Category
 
 class CreateQuoteNewAuthorForm(forms.ModelForm):
-    author = forms.ModelChoiceField(queryset=Authors.objects.all(),required=False, label='Автор',
-                                    widget=ModelSelect2Widget(model = Authors, search_fields=['name__icontains']))
+    author = forms.ModelChoiceField(queryset=Author.objects.all(),required=False, label='Автор',
+                                    widget=ModelSelect2Widget(model = Author, search_fields=['name__icontains']))
     new_author = forms.CharField(max_length= 150, required=False, label='Новый автор', 
                                  widget=forms.TextInput(attrs={'placeholder': 'Введите автора, если его нет в списке'}))
     biography = forms.CharField(required = False, label='Биография', widget=forms.Textarea())
@@ -19,7 +19,7 @@ class CreateQuoteNewAuthorForm(forms.ModelForm):
                                  widget=forms.Textarea(attrs={'placeholder': 'Разделяйте запятой для нескольких категорий'}))
 
     class Meta():
-        model = Quotes
+        model = Quote
         fields =['quote']
     
 
@@ -41,10 +41,10 @@ class CreateQuoteNewAuthorForm(forms.ModelForm):
         photo = self.cleaned_data.get('photo')
         categories = list(self.cleaned_data['categories'])
 
-        if Authors.objects.filter(name = author).exists():
-            author =  Authors.objects.get(name = author)
+        if Author.objects.filter(name = author).exists():
+            author =  Author.objects.get(name = author)
         else:
-            author,_ = Authors.objects.get_or_create(name=author, biography=biography, photo=photo)
+            author,_ = Author.objects.get_or_create(name=author, biography=biography, photo=photo)
         
         for cat in self.cleaned_data['new_categories'].split(','):
             if cat:
@@ -52,7 +52,7 @@ class CreateQuoteNewAuthorForm(forms.ModelForm):
                 category,_ = Category.objects.get_or_create(name = cat)
                 categories.append(category)
         
-        quote = Quotes.objects.create(quote=self.cleaned_data['quote'], author = author)
+        quote = Quote.objects.create(quote=self.cleaned_data['quote'], author = author)
         quote.category.set(categories)
         quote.save()
 

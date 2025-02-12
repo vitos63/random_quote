@@ -5,20 +5,20 @@ from rest_framework.response import Response
 from rest_framework.permissions import IsAuthenticated
 from rest_framework import status
 from rest_framework.exceptions import PermissionDenied
-from quotes.models import Quotes, Authors, Category
+from quotes.models import Quote, Author, Category
 from api_quotes.serializers import QuoteSerializer, AuthorSerializer, CategorySerializer, RegisterSerializer, CreateQuoteSerializer, SuggestedQuotesSerializer, SaveQuoteSerializer
 
 class RandomQuoteAPIView(RetrieveAPIView):
     serializer_class = QuoteSerializer
 
     def get(self, request, *args, **kwargs):
-        random_quote = Quotes.objects.select_related('author').prefetch_related('category').filter(status='Published').order_by('?').first()   
+        random_quote = Quote.objects.random_quote()   
         serializer_data = self.serializer_class(random_quote).data
         return Response(serializer_data)
 
 
 class AuthorsAPIView(ListAPIView):
-    queryset = Authors.objects.with_published_quotes()
+    queryset = Author.objects.with_published_quotes()
     serializer_class = AuthorSerializer
     
 
@@ -31,8 +31,8 @@ class AuthorQuotesAPIView(ListAPIView):
     serializer_class = QuoteSerializer
 
     def get_queryset(self):
-        author = get_object_or_404(Authors,slug=self.kwargs['author'])
-        return Quotes.objects.prefetch_related('category').filter(author=author, status='Published')
+        author = get_object_or_404(Author,slug=self.kwargs['author'])
+        return Quote.objects.prefetch_related('category').filter(author=author, status='Published')
 
 
 class CategoryQuotesAPIView(ListAPIView):
@@ -40,7 +40,7 @@ class CategoryQuotesAPIView(ListAPIView):
 
     def get_queryset(self):
         category = get_object_or_404(Category, slug=self.kwargs['category'])
-        return Quotes.objects.select_related('author').prefetch_related('category').filter(category=category, status='Published')
+        return Quote.objects.select_related('author').prefetch_related('category').filter(category=category, status='Published')
 
 
 class SearchAPIView(APIView):
@@ -49,8 +49,8 @@ class SearchAPIView(APIView):
         search_field = self.request.GET.get('search_field', '')
         serializer_data = {}
         if search_field:
-            serializer_data['quotes_result']  = QuoteSerializer(Quotes.objects.select_related('author').prefetch_related('category').filter(quote__icontains=search_field, status='Published'), many=True).data
-            serializer_data['authors_result'] = AuthorSerializer(Authors.objects.with_published_quotes().filter(name__icontains=search_field), many=True).data
+            serializer_data['quotes_result']  = QuoteSerializer(Quote.objects.select_related('author').prefetch_related('category').filter(quote__icontains=search_field, status='Published'), many=True).data
+            serializer_data['authors_result'] = AuthorSerializer(Author.objects.with_published_quotes().filter(name__icontains=search_field), many=True).data
             serializer_data['categories_result'] =CategorySerializer(Category.objects.with_published_quotes().filter(name__icontains=search_field), many=True).data
         
         if not any(serializer_data.values()):
@@ -116,7 +116,7 @@ class SuggestedQuotesAPIView(ListAPIView):
     permission_classes = [IsAuthenticated,]
 
     def get_queryset(self):
-        return Quotes.objects.select_related('author').prefetch_related('category').filter(user = self.request.user)
+        return Quote.objects.select_related('author').prefetch_related('category').filter(user = self.request.user)
     
     
 class SavedQuotesAPIView(ListAPIView):

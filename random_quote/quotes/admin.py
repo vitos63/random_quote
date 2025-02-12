@@ -1,9 +1,9 @@
 from django.contrib import admin
-from .models import Quotes, Authors, Category
+from .models import Quote, Author, Category
 from .models import Menu
 
 
-@admin.register(Quotes)
+@admin.register(Quote)
 class QuotesAdmin(admin.ModelAdmin):
     list_display = ['quote', 'author','author__biography', 'status']
     actions = ['set_published', 'set_rejected']
@@ -18,7 +18,7 @@ class QuotesAdmin(admin.ModelAdmin):
         queryset.update(status = 'Rejected')
 
 
-@admin.register(Authors, Category)
+@admin.register(Author, Category)
 class AuthorsCategoryAdmin(admin.ModelAdmin):
     list_display = ['name']
 

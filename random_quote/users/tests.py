@@ -3,7 +3,7 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 from http import HTTPStatus
-from quotes.models import Quotes
+from quotes.models import Quote
 
 class UserPagesTestCase(TestCase):
     fixtures = ['quotes_menu.json', 'quotes_category.json', 'quotes_authors.json', 'quotes_quotes.json', 'auth_users.json']
@@ -164,7 +164,7 @@ class UserFormTestCase(TestCase):
     
     def test_delete_save_quotes(self):
 
-        random_quote = choice(Quotes.objects.values('pk'))['pk']
+        random_quote = choice(Quote.objects.values('pk'))['pk']
 
         self.client.force_login(user=self.user)
         self.client.get(reverse('save_quote',kwargs={'id':random_quote}))

@@ -5,7 +5,7 @@ from django.db.models import Q, Count
 from django.contrib.auth import get_user_model
 from http import HTTPStatus
 from urllib.parse import urlencode
-from quotes.models import Authors, Category, Quotes
+from quotes.models import Author, Category, Quote
 
 class QuotePagesTestCase(TestCase):
     fixtures = ['quotes_menu.json', 'quotes_category.json', 'quotes_authors.json', 'quotes_quotes.json', 'auth_users.json']
@@ -30,7 +30,7 @@ class QuotePagesTestCase(TestCase):
     
     def test_author_quotes_page(self):
 
-        for i in Authors.objects.all():
+        for i in Author.objects.all():
             response = self.client.get(reverse('author_quotes', kwargs={'author':i.slug}))
             self.assertEqual(response.status_code, HTTPStatus.OK)
             self.assertTemplateUsed('quotes/author_quotes.html')
@@ -49,9 +49,9 @@ class QuotePagesTestCase(TestCase):
         self.assertEqual(response.status_code, HTTPStatus.OK)
         self.assertTemplateUsed('quotes/search.html')
         self.assertEqual(list(response.context['quotes_result']), 
-                         list(Quotes.objects.filter(quote__icontains=response.context['search_field'], status='Published')))
+                         list(Quote.objects.filter(quote__icontains=response.context['search_field'], status='Published')))
         self.assertEqual(list(response.context['authors_result']), 
-                         list(Authors.objects.annotate(published_quotes_count = Count('author_quotes',
+                         list(Author.objects.annotate(published_quotes_count = Count('author_quotes',
                                         filter=Q(author_quotes__status='Published'))).filter(published_quotes_count__gt=0, 
                                                                 name__icontains=response.context['search_field'])))
         self.assertEqual(list(response.context['categories_result']), 
@@ -69,7 +69,7 @@ class QuotePagesTestCase(TestCase):
     
     def test_redirect_save_quote_page(self):
 
-        path = reverse('save_quote', kwargs={'id':choice(Quotes.objects.all()).id})
+        path = reverse('save_quote', kwargs={'id':choice(Quote.objects.all()).id})
         redirect_uri = reverse('users:login') + '?next=' + path
         response = self.client.get(path)
         self.assertEqual(response.status_code, HTTPStatus.FOUND)
@@ -93,14 +93,14 @@ class QuotesFormsTestCase(TestCase):
 
     def test_save_quote_form(self):
 
-        random_quote = choice(Quotes.objects.values('pk'))['pk']
+        random_quote = choice(Quote.objects.values('pk'))['pk']
         self.client.force_login(user=self.user)
         self.client.get(reverse('save_quote',kwargs={'id':random_quote}))
         self.assertTrue(get_user_model().objects.get(username=self.test_user['username']).profile.saved_quotes.filter(id=random_quote).exists())
     
     def test_create_quote_form_exist_author(self):
 
-        author = choice(Authors.objects.all()).id
+        author = choice(Author.objects.all()).id
         categories = choice(Category.objects.all())
         test_form = {
             'author' : author,
@@ -114,8 +114,8 @@ class QuotesFormsTestCase(TestCase):
         response = self.client.post(reverse('create_quote'), test_form)
         self.assertTrue(response.status_code, HTTPStatus.OK)
         self.assertTemplateUsed('quotes/success_form.html')
-        self.assertTrue(Quotes.objects.filter(quote = 'Some quote').exists())
-        self.assertTrue(Quotes.objects.get(quote = 'Some quote').author.id==author)
+        self.assertTrue(Quote.objects.filter(quote = 'Some quote').exists())
+        self.assertTrue(Quote.objects.get(quote = 'Some quote').author.id==author)
     
     def test_create_quote_form_new_author(self):
 
@@ -132,8 +132,8 @@ class QuotesFormsTestCase(TestCase):
         response = self.client.post(reverse('create_quote'), test_form)
         self.assertTrue(response.status_code, HTTPStatus.OK)
         self.assertTemplateUsed('quotes/success_form.html')
-        self.assertTrue(Quotes.objects.filter(quote = 'Some quote').exists())
-        self.assertTrue(Quotes.objects.get(quote = 'Some quote').author.name=='New Author')
+        self.assertTrue(Quote.objects.filter(quote = 'Some quote').exists())
+        self.assertTrue(Quote.objects.get(quote = 'Some quote').author.name=='New Author')
     
     def test_creste_quote_no_auotrs(self):
 
@@ -150,7 +150,7 @@ class QuotesFormsTestCase(TestCase):
     
     def test_creste_quote_no_categories(self):
 
-        author = choice(Authors.objects.all()).id
+        author = choice(Author.objects.all()).id
         test_form = {
             'author' : author,
             'quote' : 'Some quote',

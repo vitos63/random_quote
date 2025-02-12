@@ -1,20 +1,22 @@
 from django.contrib.auth import get_user_model
 from rest_framework import serializers
 from rest_framework.validators import UniqueValidator
-from quotes.models import Quotes, Authors, Category
+from quotes.models import Quote, Author, Category
+
+User = get_user_model()
 
 class QuoteSerializer(serializers.ModelSerializer):
     author = serializers.StringRelatedField()
     category = serializers.StringRelatedField(many=True)
 
     class Meta:
-        model = Quotes
+        model = Quote
         fields = ['quote', 'author', 'category']
 
 class AuthorSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Authors
+        model = Author
         fields = '__all__'
 
 class CategorySerializer(serializers.ModelSerializer):
@@ -25,15 +27,15 @@ class CategorySerializer(serializers.ModelSerializer):
 
 
 class RegisterSerializer(serializers.ModelSerializer):
-    username = serializers.CharField(max_length = 150, validators = [UniqueValidator(queryset=get_user_model().objects.all(), message='Пользователь с таким логином уже существует')])
+    username = serializers.CharField(max_length = 150, validators = [UniqueValidator(queryset=User.objects.all(), message='Пользователь с таким логином уже существует')])
     first_name = serializers.CharField(required = False, allow_blank=True)
     last_name = serializers.CharField(required = False, allow_blank=True)
-    email = serializers.EmailField(validators = [UniqueValidator(queryset=get_user_model().objects.all(), message='Пользователь с таким email уже существует')])
+    email = serializers.EmailField(validators = [UniqueValidator(queryset=User.objects.all(), message='Пользователь с таким email уже существует')])
     password1 = serializers.CharField(write_only=True, min_length = 8, label = 'Пароль')
     password2 = serializers.CharField(write_only=True, min_length = 8, label = 'Подтверждение пароля')
 
     class Meta:
-        model = get_user_model()
+        model = User
         fields = ['username', 'first_name', 'last_name', 'email', 'password1', 'password2']
     
     def validate(self, attrs):
@@ -44,7 +46,7 @@ class RegisterSerializer(serializers.ModelSerializer):
     
 
     def create(self, validated_data):
-        user = get_user_model().objects.create_user(
+        user = User.objects.create_user(
             username=validated_data['username'],
             first_name=validated_data.get('first_name',''),
             last_name=validated_data.get('last_name',''),
@@ -56,7 +58,7 @@ class RegisterSerializer(serializers.ModelSerializer):
 
 class CreateQuoteSerializer(serializers.ModelSerializer):
     quote = serializers.CharField()
-    author = serializers.PrimaryKeyRelatedField(queryset = Authors.objects.all(), required=False)
+    author = serializers.PrimaryKeyRelatedField(queryset = Author.objects.all(), required=False)
     new_author = serializers.CharField(required = False, max_length = 250)
     biography = serializers.CharField(required = False)
     photo = serializers.ImageField(required = False)
@@ -65,7 +67,7 @@ class CreateQuoteSerializer(serializers.ModelSerializer):
 
 
     class Meta:
-        model = Quotes
+        model = Quote
         fields = ['quote', 'author', 'new_author', 'biography', 'photo', 'categories', 'new_categories']
     
     def validate(self, attrs):
@@ -83,10 +85,10 @@ class CreateQuoteSerializer(serializers.ModelSerializer):
         photo = self.validated_data.get('photo', None)
         categories = list(self.validated_data['categories'])
 
-        if Authors.objects.filter(name = author).exists():
-            author =  Authors.objects.get(name = author)
+        if Author.objects.filter(name = author).exists():
+            author =  Author.objects.get(name = author)
         else:
-            author,_ = Authors.objects.get_or_create(name=author, biography=biography, photo=photo)
+            author,_ = Author.objects.get_or_create(name=author, biography=biography, photo=photo)
         
         for cat in self.validated_data.get('new_categories','').split(','):
             if cat:
@@ -94,7 +96,7 @@ class CreateQuoteSerializer(serializers.ModelSerializer):
                 category,_ = Category.objects.get_or_create(name = cat)
                 categories.append(category)
         
-        quote = Quotes.objects.create(quote=self.validated_data['quote'], author = author)
+        quote = Quote.objects.create(quote=self.validated_data['quote'], author = author)
         quote.category.set(categories)
         quote.user = self.context['request'].user
         quote.save()
@@ -105,12 +107,12 @@ class SaveQuoteSerializer(serializers.Serializer):
     quote_id = serializers.IntegerField() 
     
     def validated_quote_id(self, value):
-        if not Quotes.objects.filter(id=value).exists():
+        if not Quote.objects.filter(id=value).exists():
             raise serializers.ValidationError('Данной цитаты не существует')
         return value
     
     def create(self, validated_data):
-        quote = Quotes.objects.get(id = validated_data.get('quote_id'))
+        quote = Quote.objects.get(id = validated_data.get('quote_id'))
         
         user = self.context['request'].user
         user.profile.saved_quotes.add(quote)
@@ -123,7 +125,7 @@ class SaveQuoteSerializer(serializers.Serializer):
 class SuggestedQuotesSerializer(serializers.ModelSerializer):
 
     class Meta:
-        model = Quotes
+        model = Quote
         fields = ['quote', 'author', 'category', 'status']
 
 

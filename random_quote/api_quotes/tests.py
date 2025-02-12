@@ -3,7 +3,7 @@ from django.urls import reverse
 from rest_framework.test import APIClient
 from rest_framework import status
 from django.contrib.auth import get_user_model
-from quotes.models import Quotes, Authors, Category
+from quotes.models import Quote, Author, Category
 
 
 
@@ -12,9 +12,9 @@ class APITestCase(TestCase):
         
         self.client = APIClient()
         self.user = get_user_model().objects.create_user(username='testuser', email='testuser@example.com', password='password123')
-        self.author = Authors.objects.create(name='Author 1', slug='author-1')
+        self.author = Author.objects.create(name='Author 1', slug='author-1')
         self.category = Category.objects.create(name='Category 1', slug='category-1')
-        self.quote = Quotes.objects.create(quote='Test Quote', author=self.author, status='Published')
+        self.quote = Quote.objects.create(quote='Test Quote', author=self.author, status='Published')
         self.quote.category.add(self.category)
 
     def test_random_quote_api_view(self):
@@ -29,7 +29,7 @@ class APITestCase(TestCase):
         self.assertEqual(response.data['quote'], self.quote.quote)
         self.assertEqual(response.data['author'], self.quote.author.name)
 
-    def test_authors_api_view(self):
+    def test_author_api_view(self):
 
         url = reverse('api_quotes:authors')
         response = self.client.get(url)
@@ -47,7 +47,7 @@ class APITestCase(TestCase):
         self.assertEqual(len(response.data), 1)
         self.assertEqual(response.data[0]['name'], 'Category 1')
 
-    def test_author_quotes_api_view(self):
+    def test_author_quote_api_view(self):
 
         url = reverse('api_quotes:author_quotes', kwargs={'author': self.author.slug})
         response = self.client.get(url)
@@ -169,7 +169,7 @@ class APITestCase(TestCase):
         self.assertTrue(response.data['categories'], 'Вы должны выбрать из уже существующих категорий или написать свои')
 
 
-    def test_saved_quotes_api_view(self):
+    def test_saved_quote_api_view(self):
 
         self.user.profile.saved_quotes.add(self.quote)
 

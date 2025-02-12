@@ -1,4 +1,4 @@
-from quotes.models import Quotes
+from quotes.models import Quote
 
 class SaveQuoteService:
     def __init__(self, quote_id, user):
@@ -8,7 +8,7 @@ class SaveQuoteService:
     def save_quote(self):
 
         try:
-            quote = Quotes.objects.get(id=self.quote_id)
+            quote = Quote.objects.get(id=self.quote_id)
             if quote in self.user.profile.saved_quotes.all():
                 return 'Цитата уже сохранена'
             else:
@@ -16,6 +16,6 @@ class SaveQuoteService:
                 self.user.save()
                 return 'Цитата успешно сохранена'
 
-        except Quotes.DoesNotExist:
+        except Quote.DoesNotExist:
             return
         

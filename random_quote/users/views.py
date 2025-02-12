@@ -8,7 +8,7 @@ from users.forms import ProfileForm, RegisterUserForm
 from django.contrib import messages
 from django.contrib.auth import get_user_model
 from random_quote.settings import DEFAULT_IMAGE
-from quotes.models import Quotes
+from quotes.models import Quote
 from users.services.delete_saved_quotes_service import DeleteSavedQuotesService
 
 
@@ -49,7 +49,7 @@ class ProfileUserSuggestedQuotesView(LoginRequiredMixin, ListView):
     extra_context = {'default_photo': DEFAULT_IMAGE}
 
     def get_queryset(self):
-        return Quotes.objects.select_related('author').prefetch_related('category').filter(user = self.request.user)
+        return Quote.objects.select_related('author').prefetch_related('category').filter(user = self.request.user)
 
 
 class ProfileUserSavedQuotesView(LoginRequiredMixin, ListView):
