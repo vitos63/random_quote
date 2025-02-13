@@ -106,7 +106,7 @@ class QuotesFormsTestCase(TestCase):
             'author' : author,
             'quote' : 'Some quote',
             'categories' : categories.id,
-            'new_categories':'new_cat1, new_cat2'
+            'new_categories':'new cat one, new cat two'
         }
 
         self.client.force_login(user=self.user)
@@ -124,7 +124,7 @@ class QuotesFormsTestCase(TestCase):
             'new_author' : 'new author',
             'quote' : 'Some quote',
             'categories' : categories.id,
-            'new_categories':'new_cat1, new_cat2'
+            'new_categories':'new cat one, new cat two'
         }
 
         self.client.force_login(user=self.user)

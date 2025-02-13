@@ -2,12 +2,15 @@ from django import forms
 from django.core.exceptions import ValidationError
 from django_select2.forms import ModelSelect2MultipleWidget, ModelSelect2Widget
 from quotes.models import Quote, Author, Category
+from quotes.validators.author_validator import author_validate
+from quotes.validators.category_validator import category_validate
 
 class CreateQuoteNewAuthorForm(forms.ModelForm):
     author = forms.ModelChoiceField(queryset=Author.objects.all(),required=False, label='Автор',
                                     widget=ModelSelect2Widget(model = Author, search_fields=['name__icontains']))
-    new_author = forms.CharField(max_length= 150, required=False, label='Новый автор', 
-                                 widget=forms.TextInput(attrs={'placeholder': 'Введите автора, если его нет в списке'}))
+    new_author = forms.CharField(max_length= 150, required=False, label='Новый автор', validators=[author_validate],
+                                 widget=forms.TextInput(attrs={'placeholder': 'Введите автора, если его нет в списке'}),
+                                 strip=True)
     biography = forms.CharField(required = False, label='Биография', widget=forms.Textarea())
     photo = forms.ImageField(required=False, label='Фото автора')
     quote = forms.CharField(required=True, label='Цитата',widget=forms.Textarea())
@@ -15,8 +18,9 @@ class CreateQuoteNewAuthorForm(forms.ModelForm):
                                                  required = False, widget=ModelSelect2MultipleWidget(model=Category,
             search_fields=['name__icontains']))
 
-    new_categories = forms.CharField(max_length=150, required=False, label='Добавить свои категории', 
-                                 widget=forms.Textarea(attrs={'placeholder': 'Разделяйте запятой для нескольких категорий'}))
+    new_categories = forms.CharField(max_length=150, required=False, label='Добавить свои категории', validators=[category_validate],
+                                 widget=forms.Textarea(attrs={'placeholder': 'Разделяйте запятой для нескольких категорий'}),
+                                 strip=True)
 
     class Meta():
         model = Quote
@@ -24,15 +28,15 @@ class CreateQuoteNewAuthorForm(forms.ModelForm):
     
 
     def clean(self):
-        cleaned_data = super().clean()
+        self.cleaned_data = super().clean()
 
-        if not self.cleaned_data['categories'] and not self.cleaned_data['new_categories']:
-            raise ValidationError('Вы должны выбрать хотя бы одну категорию или написать свою')
+        if not self.cleaned_data['categories'] and not self.cleaned_data.get('new_categories',''):
+            raise ValidationError('Вы должны выбрать хотя бы одну категорию или написать свою.')
         
-        if not self.cleaned_data['author'] and not self.cleaned_data['new_author']:
-            raise ValidationError('Вы должны выбрать автора из списка или написать своего')
+        if not self.cleaned_data['author'] and not self.cleaned_data.get('new_author',''):
+            raise ValidationError('Вы должны выбрать автора из списка или написать своего.')
         
-        return cleaned_data
+        return self.cleaned_data
 
     def save(self):
 
