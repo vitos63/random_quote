@@ -1,11 +1,12 @@
 from quotes.models import Quote
 
+
 class DeleteSavedQuotesService:
 
     def __init__(self, quote_id, user):
         self.quote_id = quote_id
         self.user = user
-    
+
     def delete(self):
         try:
             quote = Quote.objects.get(id=self.quote_id)
@@ -17,5 +18,3 @@ class DeleteSavedQuotesService:
 
         except Quote.DoesNotExist:
             return
-        
-        

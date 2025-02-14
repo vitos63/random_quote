@@ -14,79 +14,73 @@ from users.services.delete_saved_quotes_service import DeleteSavedQuotesService
 
 class RegisterUser(CreateView):
     form_class = RegisterUserForm
-    success_url = reverse_lazy('users:suggested_quotes')
-    template_name = 'users/user_register.html'
-    extra_context = {'title':'Регистрация', 'button':'Зарегистрироваться'}
+    success_url = reverse_lazy("users:suggested_quotes")
+    template_name = "users/user_register.html"
+    extra_context = {"title": "Регистрация", "button": "Зарегистрироваться"}
 
 
 class LoginUser(LoginView):
-    template_name = 'users/login.html'
+    template_name = "users/login.html"
     form_class = AuthenticationForm
 
     def dispatch(self, request, *args, **kwargs):
         if request.user.is_authenticated:
-            return redirect('users:suggested_quotes')
+            return redirect("users:suggested_quotes")
         return super().dispatch(request, *args, **kwargs)
 
 
 class EditProfileUserView(LoginRequiredMixin, UpdateView):
-    template_name = 'users/edit_profile.html'
+    template_name = "users/edit_profile.html"
     form_class = ProfileForm
-    success_url = reverse_lazy('users:edit_profile')
-    extra_context =  {'default_photo': DEFAULT_IMAGE}
-    
-    def get_object(self, queryset = None):
+    success_url = reverse_lazy("users:edit_profile")
+    extra_context = {"default_photo": DEFAULT_IMAGE}
+
+    def get_object(self, queryset=None):
         return self.request.user
-    
+
     def form_valid(self, form):
-        messages.success(self.request, 'Ваш профиль успешно обновлен!')
+        messages.success(self.request, "Ваш профиль успешно обновлен!")
         return super().form_valid(form)
-    
+
 
 class ProfileUserSuggestedQuotesView(LoginRequiredMixin, ListView):
-    template_name = 'users/user_suggested_quotes.html'
-    context_object_name = 'suggested_quotes'
-    extra_context = {'default_photo': DEFAULT_IMAGE}
+    template_name = "users/user_suggested_quotes.html"
+    context_object_name = "suggested_quotes"
+    extra_context = {"default_photo": DEFAULT_IMAGE}
 
     def get_queryset(self):
-        return Quote.objects.select_related('author').prefetch_related('category').filter(user = self.request.user)
+        return (
+            Quote.objects.select_related("author")
+            .prefetch_related("category")
+            .filter(user=self.request.user)
+        )
 
 
 class ProfileUserSavedQuotesView(LoginRequiredMixin, ListView):
-    template_name = 'users/user_saved_quotes.html'
-    context_object_name = 'saved_quotes'
-    extra_context = {'default_photo': DEFAULT_IMAGE}
+    template_name = "users/user_saved_quotes.html"
+    context_object_name = "saved_quotes"
+    extra_context = {"default_photo": DEFAULT_IMAGE}
 
     def get_queryset(self):
-        user = get_user_model().objects.get(id = self.request.user.id)
+        user = get_user_model().objects.get(id=self.request.user.id)
         return user.profile.saved_quotes.all()
 
 
 class ProfileUserDeleteSavedQuotesView(LoginRequiredMixin, UpdateView):
-    template_name = 'users/saved_quotes'
+    template_name = "users/saved_quotes"
     model = get_user_model()
     fields = []
-    
-    def get_object(self, queryset = None):
+
+    def get_object(self, queryset=None):
         return get_user_model().objects.get(id=self.request.user.id)
-    
+
     def get(self, request, *args, **kwargs):
         user = self.get_object()
 
-        if DeleteSavedQuotesService(self.kwargs['id'], user).delete():
-            messages.success (self.request, 'Цитата успешно удалена')
-        
+        if DeleteSavedQuotesService(self.kwargs["id"], user).delete():
+            messages.success(self.request, "Цитата успешно удалена")
+
         else:
-            messages.error(self.request, 'Цитата не найдена!')
+            messages.error(self.request, "Цитата не найдена!")
 
-        return redirect('users:saved_quotes')
-
-
-
-    
-
-
-
-
-
-
+        return redirect("users:saved_quotes")

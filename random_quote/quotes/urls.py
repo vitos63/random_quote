@@ -16,15 +16,28 @@ Including another URLconf
 """
 
 from django.urls import path
-from quotes.views import AuthorQuotes, CategoryQuotes, CreateQuoteView, RandomQuoteView, SaveQuoteView, AuthorsView, CategoriesView, SearchView
+from quotes.views import (
+    AuthorQuotes,
+    CategoryQuotes,
+    CreateQuoteView,
+    RandomQuoteView,
+    SaveQuoteView,
+    AuthorsView,
+    CategoriesView,
+    SearchView,
+)
 
 urlpatterns = [
-    path('', RandomQuoteView.as_view(), name='home'),
-    path('authors/',AuthorsView.as_view(), name='authors'),
-    path('categories/',CategoriesView.as_view(), name='categories'),
-    path('create-quote/',CreateQuoteView.as_view(), name='create_quote'),
-    path('author-quotes/<slug:author>/', AuthorQuotes.as_view(), name='author_quotes'),
-    path('category-quotes/<slug:category>/', CategoryQuotes.as_view(), name='category_quotes'),
-    path('save-quote/<int:id>/', SaveQuoteView.as_view(), name='save_quote'),
-    path('search/', SearchView.as_view(), name='search'),
+    path("", RandomQuoteView.as_view(), name="home"),
+    path("authors/", AuthorsView.as_view(), name="authors"),
+    path("categories/", CategoriesView.as_view(), name="categories"),
+    path("create-quote/", CreateQuoteView.as_view(), name="create_quote"),
+    path("author-quotes/<slug:author>/", AuthorQuotes.as_view(), name="author_quotes"),
+    path(
+        "category-quotes/<slug:category>/",
+        CategoryQuotes.as_view(),
+        name="category_quotes",
+    ),
+    path("save-quote/<int:id>/", SaveQuoteView.as_view(), name="save_quote"),
+    path("search/", SearchView.as_view(), name="search"),
 ]
