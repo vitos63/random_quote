@@ -64,7 +64,7 @@
                             <a href="{{ cat.get_absolute_url }}">{{ cat.name }}</a>{% if not forloop.last %}, {% endif %}
                         {% endfor %}
                     </p>
-                    <a class="button-delete" href="{% url 'users:delete_saved_quotes' quote.id %}">Удалить цитату</a>
+                    <a class="button-delete" href="{% url 'users:delete_saved_quote' quote.id %}">Удалить цитату</a>
                 </div>
             {% endfor %}
         </div>

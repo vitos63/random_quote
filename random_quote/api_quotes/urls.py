@@ -11,7 +11,7 @@ from api_quotes.views import (
     SuggestedQuotesAPIView,
     SavedQuotesAPIView,
     SaveQuoteAPIView,
-    DeleteSavedQuotesAPIView,
+    DeleteSavedQuoteAPIView,
 )
 
 app_name = "api_quotes"
@@ -40,7 +40,7 @@ urlpatterns = [
     path("saved-quotes/", SavedQuotesAPIView.as_view(), name="saved_quotes"),
     path(
         "delete-saved-quote/<int:pk>/",
-        DeleteSavedQuotesAPIView.as_view(),
+        DeleteSavedQuoteAPIView.as_view(),
         name="delete_saved_quote",
     ),
 ]

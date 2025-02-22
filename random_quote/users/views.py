@@ -9,7 +9,7 @@ from django.contrib import messages
 from django.contrib.auth import get_user_model
 from random_quote.settings import DEFAULT_IMAGE
 from quotes.models import Quote
-from users.services.delete_saved_quotes_service import DeleteSavedQuotesService
+from users.services.delete_saved_quote_service import DeleteSavedQuoteService
 
 
 class RegisterUser(CreateView):
@@ -66,7 +66,7 @@ class ProfileUserSavedQuotesView(LoginRequiredMixin, ListView):
         return user.profile.saved_quotes.all()
 
 
-class ProfileUserDeleteSavedQuotesView(LoginRequiredMixin, UpdateView):
+class ProfileUserDeleteSavedQuoteView(LoginRequiredMixin, UpdateView):
     template_name = "users/saved_quotes"
     model = get_user_model()
     fields = []
@@ -77,7 +77,7 @@ class ProfileUserDeleteSavedQuotesView(LoginRequiredMixin, UpdateView):
     def get(self, request, *args, **kwargs):
         user = self.get_object()
 
-        if DeleteSavedQuotesService(self.kwargs["id"], user).delete():
+        if DeleteSavedQuoteService(self.kwargs["id"], user).delete():
             messages.success(self.request, "Цитата успешно удалена")
 
         else:

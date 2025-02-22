@@ -173,7 +173,7 @@ class SavedQuotesAPIView(ListAPIView):
         return self.request.user.profile.saved_quotes.all()
 
 
-class DeleteSavedQuotesAPIView(DestroyAPIView):
+class DeleteSavedQuoteAPIView(DestroyAPIView):
     permission_classes = [
         IsAuthenticated,
     ]

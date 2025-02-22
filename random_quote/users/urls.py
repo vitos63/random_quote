@@ -12,7 +12,7 @@ from users.views import (
     RegisterUser,
     ProfileUserSavedQuotesView,
     ProfileUserSuggestedQuotesView,
-    ProfileUserDeleteSavedQuotesView,
+    ProfileUserDeleteSavedQuoteView,
 )
 
 app_name = "users"
@@ -33,8 +33,8 @@ urlpatterns = [
     ),
     path(
         "profile/delete-saved-quotes/<int:id>/",
-        ProfileUserDeleteSavedQuotesView.as_view(),
-        name="delete_saved_quotes",
+        ProfileUserDeleteSavedQuoteView.as_view(),
+        name="delete_saved_quote",
     ),
     path("edit-profile/", EditProfileUserView.as_view(), name="edit_profile"),
     path(
